@@ -1,0 +1,10 @@
+theme: jekyll-theme-cayman
+title: µs Infrastructure as Code
+description: µs infrastructure as code. Automating serverless deployments for DevOps organizations.
+url: "https://mjuz.rocks"
+show_downloads: false
+github:
+  is_project_page: false
+plugins:
+  - jekyll-sitemap
+lang: en

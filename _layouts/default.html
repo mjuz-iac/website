@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body>
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    {% minibundle js %}
+    destination_path: 'assets/js/bundle'
+    assets:
+    - lib/mdb5/3.7.1/js/mdb.min
+    - js/common
+    {% endminibundle %}
+  </body>
+</html>

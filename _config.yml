@@ -1,10 +1,91 @@
-theme: jekyll-theme-cayman
+# -----------------------------------------------------------------------------
+# Site settings
+# -----------------------------------------------------------------------------
+
 title: µs Infrastructure as Code
-description: µs infrastructure as code. Automating serverless deployments for DevOps organizations.
-url: "https://mjuz.rocks"
-show_downloads: false
-github:
-  is_project_page: false
+description: > # the ">" symbol means to ignore newlines until "footer_text:"
+  µs infrastructure as code. Automating serverless deployments for DevOps organizations.
+
+url: https://mjuz.rocks # the base hostname & protocol for your site
+baseurl: # the subpath of your site, e.g. /blog/
+last_updated: true # set to true if you want to display last updated in the footer
+
+# -----------------------------------------------------------------------------
+# Social integration
+# -----------------------------------------------------------------------------
+
+github_username: mjuz-iac # your GitHub user name
+twitter_username: # your Twitter handle
+youtube_channel: # your YouTube channel id
+linkedin_username: # your LinkedIn user name
+scholar_userid: # your Google Scholar ID
+orcid_id: # your ORCID ID
+medium_username: # your Medium username
+quora_username: # your Quora username
+publons_id: # your ID on Publons
+research_gate_profile: # your profile on ResearchGate
+blogger_url: # your blogger URL
+work_url: # work page URL
+keybase_username: # your keybase user name
+wikidata_id: # your wikidata id
+
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+
+collections:
+
+# -----------------------------------------------------------------------------
+# Jekyll settings
+# -----------------------------------------------------------------------------
+
+# Markdown and syntax highlight
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: false
+      start_line: 1
+
+# Includes & excludes
+include: ['_pages']
+exclude: ['node_modules', vendor]
+
+# Plug-ins
 plugins:
+  - jekyll/minibundle
+  - jekyll-seo-tag
   - jekyll-sitemap
-lang: en
+  - jekyll-regex-replace
+
+defaults:
+  -
+    scope:
+      path: "assets/lib/**"
+    values:
+      sitemap: false
+  - scope:
+      path: ""
+    values:
+      image: /assets/img/og/mjuz.png # Default open graph image
+
+
+# -----------------------------------------------------------------------------
+# Minibundle
+# -----------------------------------------------------------------------------
+minibundle:
+  minifier_commands:
+    css: node_modules/.bin/uglifycss
+    js: node_modules/.bin/uglifyjs
+
+
+# -----------------------------------------------------------------------------
+# SASS
+# -----------------------------------------------------------------------------
+sass:
+  style: compact

@@ -54,7 +54,7 @@ kramdown:
 
 # Includes & excludes
 include: ['_pages']
-exclude: ['node_modules', vendor]
+exclude: ['bin', 'LICENSE', 'node_modules', 'package.json', 'package-lock.json', 'vendor']
 
 # Plug-ins
 plugins:

@@ -1,0 +1,11 @@
+- title: µs Infrastructure as Code
+  icon: "fab fa-github"
+  url: https://github.com/mjuz-iac/mjuz
+
+- title: Pulumi for µs
+  icon: "fab fa-github"
+  url: https://github.com/mjuz-iac/pulumi
+
+- title: Stack References to µs Converter
+  icon: "fab fa-github"
+  url: https://github.com/mjuz-iac/stackref-converter

@@ -1,0 +1,21 @@
+"German Research Foundation (DFG)":
+  url: "https://www.dfg.de"
+  projects:
+    - title: "SFB CROSSING"
+      url: "https://www.crossing.tu-darmstadt.de/crc_1119/index.en.jsp"
+    - title: "Project 383964710"
+      url: "https://gepris.dfg.de/gepris/projekt/383964710?language=en"
+
+"Hessian LOEWE Initiative":
+  url: "https://wissenschaft.hessen.de/wissenschaft/landesprogramm-loewe"
+  projects:
+    - title: "SoftwareFactory 4.0"
+      url: "https://www.software-factory-4-0.de"
+    - title: "emergenCITY"
+      url: "https://www.emergencity.de/"
+
+"University of St. Gallen":
+  url: "https://www.unisg.ch"
+  projects:
+    - title: "IPF 1031569"
+      url: "https://www.unisg.ch/en/forschung/grantsoffice/foerderung/hochschulinterne-foerderung/gffpostdocfoerderung"

@@ -7,9 +7,7 @@
 
   <body>
 
-    {{ content }}
-
-    {% include footer.html %}
+    {% include mjuz-content.html content=content %}
 
     {% minibundle js %}
     destination_path: 'assets/js/bundle'
@@ -17,5 +15,6 @@
     - lib/mdb5/3.7.1/js/mdb.min
     - js/common
     {% endminibundle %}
+
   </body>
 </html>

@@ -11,3 +11,35 @@ a:hover {
 .pt-58 {
   padding-top: 58px;
 }
+
+span.mjuz {
+  position: relative;
+  &:first-letter {
+    font-style: italic;
+    margin-right: 100%;
+    margin-left: .1em;
+    text-transform: lowercase;
+  }
+  &:after {
+    content: 'S';
+    position: absolute;
+    font-weight: inherit;
+    top: 0; left: 0;
+    transform: scale(.65, .65) translate(.8em, .17em);
+  }
+  font-family: "Times New Roman";
+  display: inline-block;
+  transform: scale(1.6, 1.6) translate(.1em, 0.04em);
+  overflow: hidden;
+  line-height: 1.2em;
+  height: 1.2em;
+  width: 1.3em;
+  word-break: break-all;
+  margin-top: -1em;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  span.mjuz:after {
+    font-weight: bold;
+  }
+}

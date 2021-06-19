@@ -35,6 +35,9 @@ wikidata_id: # your wikidata id
 # -----------------------------------------------------------------------------
 
 collections:
+  articles: # Standalone articles, also used on pages using articles layout
+    output: true
+    permalink: /articles/:path
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -55,7 +58,7 @@ kramdown:
 
 # Includes & excludes
 include: ['_pages']
-exclude: ['bin', 'LICENSE', 'node_modules', 'package.json', 'package-lock.json', 'vendor']
+exclude: ['bin', 'LICENSE', 'node_modules', 'package.json', 'package-lock.json', 'README.md', 'vendor']
 
 # Plug-ins
 plugins:

@@ -1,4 +1,4 @@
-<article class="{% unless item.no_container == true %}container{% endunless %} my-3 my-md-5">
+<article class="{% unless include.item.no_container == true %}container{% endunless %} my-3 my-md-5" id="{{ include.item.id | split: '/' | last }}">
     {% unless include.item.hide_title == true %}
         <header class="my-3">
             <h1>{{ include.item.title }}</h1>

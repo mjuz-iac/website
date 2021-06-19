@@ -12,6 +12,13 @@ a:hover {
   padding-top: 58px;
 }
 
+article:before {
+  margin-top: -58px;
+  height: 58px;
+  content: "";
+  display:block;
+}
+
 span.mjuz {
   position: relative;
   &:first-letter {

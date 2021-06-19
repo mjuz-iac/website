@@ -13,7 +13,7 @@
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbar">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{{ '/#mjuz' | relative_url }}">
                     <img
                             src="{{ '/assets/img/logo_small.svg' | relative_url }}"
                             alt=""
@@ -23,7 +23,7 @@
                     />
                 </a>
                 <ul class="navbar-nav nav me-auto mb-2 mb-md-0">
-                    {% assign items = site.pages | where: 'nav', true | sort: 'nav_rank' %}
+                    {% assign items = site.pages | concat: site.articles | where: 'nav', true | sort: 'nav_rank' %}
                     {% for item in items %}
                     <li class="nav-item">
                         {% assign itemUrl = item.nav_url | default: item.url %}

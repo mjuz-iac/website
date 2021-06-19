@@ -50,3 +50,20 @@ span.mjuz {
     font-weight: bold;
   }
 }
+
+// Bibliography
+
+ol.bibliography {
+  list-style: none;
+  padding: 0;
+  margin-top: 0;
+
+  li {
+    margin-bottom: 2rem;
+    .abbr {
+      display: inline;
+      text-align: right;
+      float: right;
+    }
+  }
+}

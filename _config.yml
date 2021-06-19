@@ -63,6 +63,7 @@ exclude: ['bin', 'LICENSE', 'node_modules', 'package.json', 'package-lock.json',
 # Plug-ins
 plugins:
   - jekyll/minibundle
+  - jekyll/scholar
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-regex-replace
@@ -77,6 +78,33 @@ defaults:
       path: ""
     values:
       image: /assets/img/og/mjuz.png # Default open graph image
+
+# -----------------------------------------------------------------------------
+# Jekyll Scholar
+# -----------------------------------------------------------------------------
+
+scholar:
+
+  last_name:
+  first_name: []
+
+  style: apa
+  locale: en
+
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_layout: bibtex.html
+  details_link: Details
+
+  query: "@*"
+  sort_by: year,month
+  order: descending
 
 
 # -----------------------------------------------------------------------------

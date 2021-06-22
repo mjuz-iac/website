@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 group :jekyll_plugins do
-    gem 'github-pages'
     gem 'jekyll'
     gem 'jekyll-scholar'
     gem 'unicode_utils'
@@ -9,3 +8,5 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jekyll-regex-replace'
 end
+
+gem "webrick", "~> 1.7"

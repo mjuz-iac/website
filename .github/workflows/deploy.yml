@@ -18,23 +18,12 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: '14'
+    - name: Setup NPM dependencies
+      run: npm ci
     - name: Setup Ruby
-      uses: actions/setup-ruby@v1
+      uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '2.7'
-    - name: Enable bundler cache
-      uses: actions/cache@v2
-      with:
-        path: vendor/bundle
-        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-gems-
-    - name: Install deps
-      run: |
-        gem install bundler
-        bundle config path vendor/bundle
-        bundle install --jobs 4 --retry 3
-        npm ci
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Setup deploy options
       id: setup
       run: |

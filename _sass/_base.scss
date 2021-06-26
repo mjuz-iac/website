@@ -1,39 +1,52 @@
 .bg-primary {
   background-color: $mjuz-color !important;
 }
+
 a {
   color: $mjuz-color;
 }
+
 a:hover {
   color: $mjuz-dark-color;
 }
 
-.pt-58 {
-  padding-top: 58px;
+.pnav {
+  padding-top: 46px;
+  @media(min-width: 768px) {
+    padding-top: 58px;
+  }
 }
 
 article:before {
-  margin-top: -58px;
-  height: 58px;
+  margin-top: -46px;
+  height: 46px;
+  @media(min-width: 768px) {
+    margin-top: -58px;
+    height: 58px;
+  }
   content: "";
-  display:block;
+  display: block;
 }
 
 span.mjuz {
   position: relative;
+
   &:first-letter {
     font-style: italic;
     margin-right: 100%;
     margin-left: .1em;
     text-transform: lowercase;
   }
+
   &:after {
     content: 'S';
     position: absolute;
     font-weight: inherit;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
     transform: scale(.65, .65) translate(.8em, .17em);
   }
+
   font-family: "Times New Roman";
   display: inline-block;
   transform: scale(1.6, 1.6) translate(.1em, 0.04em);
@@ -60,6 +73,7 @@ ol.bibliography {
 
   li {
     margin-bottom: 2rem;
+
     .abbr {
       display: inline;
       text-align: right;

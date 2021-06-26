@@ -64,6 +64,36 @@ span.mjuz {
   }
 }
 
+.jumbotron {
+  background: linear-gradient(
+                  115deg,
+                  rgba(255, 255, 255, 1) 40%,
+                  rgba(13, 152, 186, 1) 75%
+  );
+
+  h1 {
+    img {
+      margin: -10% -18% 0 -18%;
+      width: 128%;
+      max-height: 80vh;
+    }
+
+    font-weight: normal;
+    width: 350px;
+    max-width: 100%;
+    font-size: 1.8rem;
+  }
+
+  .card img {
+    height: 150px;
+    width: 150px;
+  }
+
+  .container:first-child {
+    min-height: m#{i}n(900px, 75vh);
+  }
+}
+
 // Bibliography
 
 ol.bibliography {

@@ -3,8 +3,7 @@
 # -----------------------------------------------------------------------------
 
 title: µs Infrastructure as Code
-description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  µs infrastructure as code. Automating serverless deployments for DevOps organizations.
+description:
 
 url: https://mjuz.rocks # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/

@@ -10,19 +10,30 @@ a:hover {
   color: $mjuz-dark-color;
 }
 
+$navbar-height: 46px;
+$navbar-small-height: 58px;
+$navbar-small-break: 576px;
+
+.navbar-height {
+  height: $navbar-height;
+  @media(min-width: $navbar-small-break) {
+    height: $navbar-small-height;
+  }
+}
+
 .pnav {
-  padding-top: 46px;
-  @media(min-width: 768px) {
-    padding-top: 58px;
+  padding-top: $navbar-height;
+  @media(min-width: $navbar-small-break) {
+    padding-top: $navbar-small-height;
   }
 }
 
 article:before {
-  margin-top: -46px;
-  height: 46px;
-  @media(min-width: 768px) {
-    margin-top: -58px;
-    height: 58px;
+  margin-top: -$navbar-height;
+  height: $navbar-height;
+  @media(min-width: $navbar-small-break) {
+    margin-top: -$navbar-small-height;
+    height: $navbar-small-height;
   }
   content: "";
   display: block;

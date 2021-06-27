@@ -2,7 +2,7 @@
 layout: articles
 title: µs
 permalink: /
-description: µs infrastructure as code. Automating serverless deployments for DevOps organizations.
+description: µs ([mju:z] "muse") is infrastructure as code for DevOps organizations. µs decentralizes coordination, is continuous and reactive, and is broadly compatible.
 nav: false
 head_articles: [mjuz] # above navbar
 articles: [example, use-cases, publications] # below navbar

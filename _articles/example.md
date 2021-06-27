@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Example
-description: Webpage example to illustrate µs infrastructure as code.
+description: Webpage example illustrating µs infrastructure as code.
 nav: true
 nav_rank: 2
 nav_url: /#example # Url to navigate to, e.g., on article page (defaults to .url)
@@ -96,9 +96,7 @@ by defining a wish, allowing to use the offered bucket via `wish.offer`.
 </div>
 </div>
 
-<div class="row">
-    <div class="col-12 col-xl-1 col-xxl-2">
-</div>
+<div class="row justify-content-center">
     <div class="col-12 col-lg-6 col-xl-5 col-xxl-4">
 <figure class="figure d-block"  markdown="1">
 <figcaption class="figure-caption text-center">µs deployment definition of the hoster.</figcaption>

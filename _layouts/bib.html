@@ -1,8 +1,7 @@
 ---
 ---
 
-<div class="card">
-
+<div class="card border">
 
   <div id="{{entry.key}}" class="card-body">
     {% if entry.type == "thesis" %}
@@ -29,7 +28,7 @@
                 {% endfor %}
           {% endif %}
       </div>
-      <h5 class="card-title">{{ entry.title | replace: '\mathbbN', 'ℕ' | replace: '\mathcalO', '𝓞' | replace: '\log', 'log' }}</h5>
+      <h5 class="card-title">{% cite entry.key %} {{ entry.title | replace: '\mathbbN', 'ℕ' | replace: '\mathcalO', '𝓞' | replace: '\log', 'log' }}</h5>
       <p class=" card-text">
           <div class="author">
             {% for author in entry.author_array %}

@@ -88,7 +88,7 @@ scholar:
   last_name:
   first_name: []
 
-  style: apa
+  style: acm-sig-proceedings
   locale: en
 
   source: /_bibliography/

@@ -60,7 +60,7 @@ which subsequently automatically updates the page's content to the new name.
     <input type="radio" name="slides" id="slide-14" />
     <input type="radio" name="slides" id="slide-15" />
     <div class="controls text-center col-12 col-lg-6 my-lg-3">
-        <img class="img-fluid mb-3 w-100" src="{{ '/assets/img/website-decentralized.svg' | relative_url }}" alt="" />
+        <img class="img-fluid mb-3 w-100 inject-svg" src="{{ '/assets/img/website-decentralized.svg' | relative_url }}" alt="Animated deployment use cases animation." />
         <label class="form-check-input" type="radio" for="play"><i class="fas fa-play"></i></label>
         <label class="form-check-input" type="radio" for="slide-1"></label>
         <label class="form-check-input" type="radio" for="slide-2"></label>

@@ -244,6 +244,68 @@ ol.bibliography {
   @function slideT($slide) {
     @return ($slide / ($slidesCount+1));
   }
+  
+  @mixin showElementProps {
+    fill: $black-color;
+    opacity: 1;
+  }
+  @mixin highlightElementProps {
+    fill: $mjuz-color;
+    opacity: 1;
+  }
+  @mixin waitElementProps {
+    fill: $black-color;
+    opacity: 0.2;
+  }
+  @mixin hideElementProps {
+    fill: $black-color;
+    opacity: 0;
+  }
+
+  .deployment-hoster, .remote-editor, .bucket, .offer, .dep-bucket-offer, .dep-remote-offer,
+  .deployment-editor, .remote-hoster, .wish, .index, .dep-remote-wish, .dep-wish-index, .dep-offer-wish {
+    @include hideElementProps;
+  }
+
+  $animation: (
+          'deployment-editor': ['hide', 'highlight', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'highlight', 'wait', 'wait', 'hide'],
+          'remote-hoster': ['hide', 'wait', 'highlight', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'highlight', 'hide'],
+          'wish': ['hide', 'wait', 'wait', 'highlight', 'show', 'show', 'show', 'highlight', 'show', 'show', 'highlight', 'show', 'show', 'show', 'highlight', 'hide', 'hide'],
+          'dep-remote-wish': ['hide', 'wait', 'wait', 'highlight', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'highlight', 'hide', 'hide'],
+          'dep-offer-wish': ['hide', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'highlight', 'show', 'show', 'highlight', 'highlight', 'wait', 'wait', 'wait', 'hide', 'hide'],
+          'index': ['hide', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'highlight', 'show', 'highlight', 'wait', 'wait', 'wait', 'hide', 'hide', 'hide'],
+          'dep-wish-index': ['hide', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'highlight', 'show', 'highlight', 'wait', 'wait', 'wait', 'hide', 'hide', 'hide'],
+          'deployment-hoster': ['hide', 'hide', 'hide', 'hide', 'highlight', 'show', 'show', 'show', 'show', 'highlight', 'wait', 'wait', 'wait', 'hide', 'hide', 'hide', 'hide'],
+          'remote-editor': ['hide', 'hide', 'hide', 'hide', 'wait', 'highlight', 'show', 'show', 'show', 'show', 'show', 'show', 'highlight', 'hide', 'hide', 'hide', 'hide'],
+          'offer': ['hide', 'hide', 'hide', 'hide', 'wait', 'wait', 'highlight', 'highlight', 'show', 'show', 'highlight', 'highlight', 'hide', 'hide', 'hide', 'hide', 'hide'],
+          'dep-remote-offer': ['hide', 'hide', 'hide', 'hide', 'wait', 'wait', 'highlight', 'show', 'show', 'show', 'show', 'highlight', 'hide', 'hide', 'hide', 'hide', 'hide'],
+          'dep-bucket-offer': ['hide', 'hide', 'hide', 'hide', 'wait', 'wait', 'highlight', 'show', 'show', 'show', 'show', 'highlight', 'hide', 'hide', 'hide', 'hide', 'hide'],
+          'bucket': ['hide', 'hide', 'hide', 'hide', 'wait', 'highlight', 'show', 'show', 'show', 'show', 'show', 'show', 'highlight', 'hide', 'hide', 'hide', 'hide'],
+  );
+
+  @each $element, $viz in $animation {
+    .#{$element} {
+      transition: opacity #{$delay*$duration}s, fill #{$delay*$duration}s;
+    }
+
+    @for $slide from 0 through length($viz)-1 {
+      #slide-#{$slide}:checked ~ {
+        $class: nth($viz, $slide+1);
+
+        .controls .#{$element} {
+          @if $class == 'hide' {
+            @include hideElementProps;
+          } @else if $class == 'show' {
+            @include showElementProps;
+          } @else if $class == 'highlight' {
+            @include highlightElementProps;
+          } @else if $class == 'wait' {
+            @include waitElementProps;
+          }
+        }
+      }
+    }
+  }
 
   @for $i from 1 through $slidesCount {
     #slide-#{$i}:checked ~ {
@@ -353,4 +415,5 @@ ol.bibliography {
     }
   }
 }
+
 

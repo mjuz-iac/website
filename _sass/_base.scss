@@ -122,3 +122,235 @@ ol.bibliography {
     }
   }
 }
+
+// Use cases animation
+
+#uc-anim {
+
+  // Controls
+
+  input {
+    display: none;
+  }
+
+  .form-check-input[type="radio"]:after {
+    width: .625rem;
+    height: .625rem;
+    transform: translate(-50%, -50%);
+    background: transparent;
+    position: absolute;
+    left: 50%;
+    top: 50%
+  }
+
+  .controls label[for="play"] .fa-play {
+    font-size: .8rem;
+    transform: translate(5%, -40%);
+  }
+
+  #play:checked ~ .controls label[for="play"] {
+    color: $mjuz-color;
+    border-color: $mjuz-color;
+  }
+
+  @mixin activeControlAfterProps {
+    background-color: $mjuz-color;
+  }
+  @mixin notActiveControlAfterProps {
+    background-color: transparent;
+  }
+  @function controlAfterSelector($slide) {
+    @return '.controls label[for="slide-#{$slide}"]:after'
+  }
+  @mixin notActiveControlProps {
+    border-color: #757575;
+  }
+  @mixin activeControlProps {
+    border-color: $mjuz-color;
+  }
+  @function controlSelector($slide) {
+    @return '.controls label[for="slide-#{$slide}"]'
+  }
+  @mixin activateControl($slide) {
+    #{controlSelector($slide)} {
+      @include activeControlProps;
+    }
+    #{controlAfterSelector($slide)} {
+      @include activeControlAfterProps;
+    }
+  }
+
+  // Captions
+
+  .captions {
+    label {
+      cursor: pointer;
+    }
+
+    .list-group-flush {
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      margin-right: -1.5rem;
+      transition: max-height .5s, opacity .5s;
+    }
+  }
+
+  @mixin showCaptionGroupProps {
+    margin-bottom: -.5rem;
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+  }
+  @mixin hideCaptionGroupProps {
+    margin-bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+  }
+  @function captionGroupSelector($slide) {
+    @return '.captions label[for="slide-#{$slide}"] .list-group-flush'
+  }
+  @mixin showCaptionGroup($slide) {
+    #{captionGroupSelector($slide)} {
+      @include showCaptionGroupProps;
+    }
+  }
+
+  @mixin noHighlightCaptionProps {
+    background-color: $white-color;
+    border-color: rgba(0, 0, 0, .125);
+    color: #616161;
+  }
+  @mixin highlightCaptionProps {
+    background-color: $mjuz-color;
+    border-color: $mjuz-color;
+    color: $white-color;
+  }
+  @function captionSelector($slide) {
+    @return '.captions label[for="slide-#{$slide}"]'
+  }
+  @mixin highlightCaption($slide) {
+    #{captionSelector($slide)} {
+      @include highlightCaptionProps;
+    }
+  }
+
+  // Animation
+
+  $slidesCount: 15;
+  $duration: 40;
+  $delay: 1 / $duration;
+  @function slideT($slide) {
+    @return ($slide / ($slidesCount+1));
+  }
+
+  @for $i from 1 through $slidesCount {
+    #slide-#{$i}:checked ~ {
+      @include activateControl($i);
+      @include highlightCaption($i);
+    }
+  }
+
+  @mixin showCaptionGroupRange($slide, $from, $to) {
+    @for $i from $from through $to {
+      #slide-#{$i}:checked ~ {
+        @include showCaptionGroup($slide);
+      }
+    }
+
+    @keyframes captionGroupAnimation#{$slide} {
+      #{slideT($from) * 100%} {
+        @include hideCaptionGroupProps
+      }
+      #{(slideT($from) + $delay) * 100%} {
+        @include showCaptionGroupProps
+      }
+      #{slideT($to + 1) * 100%} {
+        @include showCaptionGroupProps
+      }
+      #{(slideT($to + 1) + $delay) * 100%} {
+        @include hideCaptionGroupProps
+      }
+    }
+  }
+  @include showCaptionGroupRange(1, 1, 3);
+  @include showCaptionGroupRange(4, 4, 8);
+  @include showCaptionGroupRange(9, 9, 12);
+  @include showCaptionGroupRange(13, 13, 15);
+
+  @for $slide from 1 through $slidesCount {
+    $slideStart: slideT($slide) * 100%;
+    $slideStartDelay: (slideT($slide) + $delay) * 100%;
+    $slideEnd: slideT($slide + 1) * 100%;
+    $slideEndDelay: (slideT($slide + 1) + $delay) * 100%;
+
+    @keyframes activeControlAnimation#{$slide} {
+      #{$slideStart} {
+        @include notActiveControlProps
+      }
+      #{$slideStartDelay} {
+        @include activeControlProps
+      }
+      #{$slideEnd} {
+        @include activeControlProps
+      }
+      #{$slideEndDelay} {
+        @include notActiveControlProps
+      }
+    }
+    @keyframes activeControlAfterAnimation#{$slide} {
+      #{$slideStart} {
+        @include notActiveControlAfterProps
+      }
+      #{$slideStartDelay} {
+        @include activeControlAfterProps
+      }
+      #{$slideEnd} {
+        @include activeControlAfterProps
+      }
+      #{$slideEndDelay} {
+        @include notActiveControlAfterProps
+      }
+    }
+    @keyframes hightlightCaptionAnimation#{$slide} {
+      #{$slideStart} {
+        @include noHighlightCaptionProps
+      }
+      #{$slideStartDelay} {
+        @include highlightCaptionProps
+      }
+      #{$slideEnd} {
+        @include highlightCaptionProps
+      }
+      #{$slideEndDelay} {
+        @include noHighlightCaptionProps
+      }
+    }
+  }
+
+  @mixin animation($animation) {
+    animation: $animation #{$duration}s infinite;
+  }
+
+  #play:checked ~ {
+    @for $slide from 1 through $slidesCount {
+      #{controlSelector($slide)} {
+        @include animation(activeControlAnimation#{$slide});
+      }
+
+      #{controlAfterSelector($slide)} {
+        @include animation(activeControlAfterAnimation#{$slide});
+      }
+
+      #{captionGroupSelector($slide)} {
+        @include animation(captionGroupAnimation#{$slide});
+      }
+
+      #{captionSelector($slide)} {
+        @include animation(hightlightCaptionAnimation#{$slide});
+      }
+    }
+  }
+}
+

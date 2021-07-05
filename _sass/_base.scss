@@ -192,7 +192,7 @@ ol.bibliography {
     @media(min-width: $break-xxl) {
       min-height: 367px;
     }
-    
+
     label {
       cursor: pointer;
     }
@@ -251,7 +251,7 @@ ol.bibliography {
   // Animation
 
   $slidesCount: 15;
-  $duration: 40;
+  $duration: 60;
   $delay: 1 / $duration;
   @function slideT($slide) {
     @return ($slide / ($slidesCount+1));
@@ -272,6 +272,18 @@ ol.bibliography {
   @mixin hideElementProps {
     fill: $black-color;
     opacity: 0;
+  }
+
+  @mixin elementProps($class) {
+    @if $class == 'hide' {
+      @include hideElementProps;
+    } @else if $class == 'show' {
+      @include showElementProps;
+    } @else if $class == 'highlight' {
+      @include highlightElementProps;
+    } @else if $class == 'wait' {
+      @include waitElementProps;
+    }
   }
 
   .deployment-hoster, .remote-editor, .bucket, .offer, .dep-bucket-offer, .dep-remote-offer,
@@ -305,16 +317,25 @@ ol.bibliography {
         $class: nth($viz, $slide+1);
 
         .controls .#{$element} {
-          @if $class == 'hide' {
-            @include hideElementProps;
-          } @else if $class == 'show' {
-            @include showElementProps;
-          } @else if $class == 'highlight' {
-            @include highlightElementProps;
-          } @else if $class == 'wait' {
-            @include waitElementProps;
+          @include elementProps($class);
+        }
+      }
+    }
+
+    @keyframes #{$element}Animation {
+      $class: '';
+      $prevClass: '';
+      @for $slide from 0 through length($viz)-1 {
+        $class: nth($viz, $slide+1);
+        @if $slide != 0 AND $class != $prevClass {
+          #{(slideT($slide) - $delay) * 100%} {
+            @include elementProps($prevClass);
+          }
+          #{slideT($slide) * 100%} {
+            @include elementProps($class);
           }
         }
+        $prevClass: $class;
       }
     }
   }
@@ -334,16 +355,16 @@ ol.bibliography {
     }
 
     @keyframes captionGroupAnimation#{$slide} {
-      #{slideT($from) * 100%} {
+      #{(slideT($from) - $delay) * 100%} {
         @include hideCaptionGroupProps
       }
-      #{(slideT($from) + $delay) * 100%} {
+      #{slideT($from) * 100%} {
+        @include showCaptionGroupProps
+      }
+      #{(slideT($to + 1) - 2*$delay) * 100%} {
         @include showCaptionGroupProps
       }
       #{(slideT($to + 1) - $delay) * 100%} {
-        @include showCaptionGroupProps
-      }
-      #{slideT($to + 1) * 100%} {
         @include hideCaptionGroupProps
       }
     }
@@ -354,10 +375,10 @@ ol.bibliography {
   @include showCaptionGroupRange(13, 13, 15);
 
   @for $slide from 1 through $slidesCount {
-    $slideStart: slideT($slide) * 100%;
-    $slideStartDelay: (slideT($slide) + $delay) * 100%;
-    $slideEnd: slideT($slide + 1) * 100%;
-    $slideEndDelay: (slideT($slide + 1) + $delay) * 100%;
+    $slideStart: (slideT($slide) - $delay) * 100%;
+    $slideStartDelay: slideT($slide) * 100%;
+    $slideEnd: (slideT($slide + 1) - $delay) * 100%;
+    $slideEndDelay: slideT($slide + 1) * 100%;
 
     @keyframes activeControlAnimation#{$slide} {
       #{$slideStart} {
@@ -408,6 +429,12 @@ ol.bibliography {
   }
 
   #play:checked ~ {
+    @each $element, $viz in $animation {
+      .controls .#{$element} {
+        @include animation(#{$element}Animation);
+      }
+    }
+
     @for $slide from 1 through $slidesCount {
       #{controlSelector($slide)} {
         @include animation(activeControlAnimation#{$slide});

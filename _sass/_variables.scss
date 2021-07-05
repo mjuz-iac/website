@@ -3,6 +3,17 @@
  * To adjust anything, simply edit the variables below and rebuild the theme.
  ******************************************************************************/
 
+// Sizes
+$break-sm: 576px;
+$break-md: 768px;
+$break-lg: 992px;
+$break-xl: 1200px;
+$break-xxl: 1400px;
+
+$navbar-height: 46px;
+$navbar-small-height: 58px;
+$navbar-small-break: $break-sm;
+
 // Colors
 $mjuz-color:  #0d98ba;
 $mjuz-dark-color:  #28788c;

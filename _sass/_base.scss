@@ -10,10 +10,6 @@ a:hover {
   color: $mjuz-dark-color;
 }
 
-$navbar-height: 46px;
-$navbar-small-height: 58px;
-$navbar-small-break: 576px;
-
 .navbar-height {
   height: $navbar-height;
   @media(min-width: $navbar-small-break) {
@@ -183,30 +179,46 @@ ol.bibliography {
   // Captions
 
   .captions {
+    min-height: 606px;
+    @media(min-width: $break-sm) {
+      min-height: 401px;
+    }
+    @media(min-width: $break-md) {
+      min-height: 350px;
+    }
+    @media(min-width: $break-lg) {
+      min-height: 427px;
+    }
+    @media(min-width: $break-xxl) {
+      min-height: 367px;
+    }
+    
     label {
       cursor: pointer;
     }
 
     .list-group-flush {
+      margin-top: .5rem;
+      margin-bottom: -.5rem;
+      margin-right: -1.5rem;
       max-height: 0;
       opacity: 0;
       visibility: hidden;
-      margin-right: -1.5rem;
       transition: max-height .5s, opacity .5s;
     }
   }
 
   @mixin showCaptionGroupProps {
-    margin-bottom: -.5rem;
     opacity: 1;
     visibility: visible;
     max-height: 500px;
+    transition-delay: .5s;
   }
   @mixin hideCaptionGroupProps {
-    margin-bottom: 0;
     opacity: 0;
     visibility: hidden;
     max-height: 0;
+    transition-delay: 0s;
   }
   @function captionGroupSelector($slide) {
     @return '.captions label[for="slide-#{$slide}"] .list-group-flush'
@@ -244,7 +256,7 @@ ol.bibliography {
   @function slideT($slide) {
     @return ($slide / ($slidesCount+1));
   }
-  
+
   @mixin showElementProps {
     fill: $black-color;
     opacity: 1;
@@ -328,10 +340,10 @@ ol.bibliography {
       #{(slideT($from) + $delay) * 100%} {
         @include showCaptionGroupProps
       }
-      #{slideT($to + 1) * 100%} {
+      #{(slideT($to + 1) - $delay) * 100%} {
         @include showCaptionGroupProps
       }
-      #{(slideT($to + 1) + $delay) * 100%} {
+      #{slideT($to + 1) * 100%} {
         @include hideCaptionGroupProps
       }
     }

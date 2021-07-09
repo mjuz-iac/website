@@ -87,9 +87,10 @@ scholar:
   last_name:
   first_name: []
 
-  style: acm-sig-proceedings
+  style: apa
   locale: en
 
+  relative: /
   source: /_bibliography/
   bibliography: papers.bib
   bibliography_template: bib

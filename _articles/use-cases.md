@@ -63,7 +63,7 @@ which subsequently automatically updates the page's content to the new name.
             <label for="slide-1" class="list-group-item list-group-item-action">The editor starts their deployment.
                 <div class="list-group-flush">
                     <label for="slide-2" class="list-group-item list-group-item-action">The remote connection to the hoster is deployed.</label>
-                    <label for="slide-3" class="list-group-item list-group-item-action">The wish for the bucket is deployed but unsatisfied, why index is not deployed.</label>
+                    <label for="slide-3" class="list-group-item list-group-item-action">The wish for the bucket is deployed but unsatisfied. Therefore, index is not deployed.</label>
                 </div>
             </label>
             <label for="slide-4" class="list-group-item list-group-item-action">The hoster starts their deployment.

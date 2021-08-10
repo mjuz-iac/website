@@ -65,13 +65,13 @@ but as continuously running processes,
 updating the deployed resources reactively based on the deployment definition
 *and* external signals, e.g., changes in another deployment.
 
-In the website example, the *hoster* could be responsible for the bucket
+In the website example, the *provider* could be responsible for the bucket
 and the *editor* for the index page in it.
 To ensure that the page is only and correctly deployed when the bucket is,
 both teams need to manually coordinate whenever the bucket
 is deployed, updated or undeployed.
 This means that the editor starts their deployment independently and runs it continuously.
-Whenever the hoster starts or updates their deployment,
+Whenever the provider starts or updates their deployment,
 the editor's deployment automatically deploys, updates and undeploys the index page,
 without manual intervention or synchronization.
 
@@ -82,8 +82,8 @@ inter-deployment dependencies of their resources must be explicit in the deploym
 `RemoteConnection` for connections to other deployments,
 `Offer` to provide resources or information to a connected deployment,
 and `Wish` to access the offer of a connected deployment.
-Using them, the hoster and editor specify their connection to the other deployment.
-The hoster offers its bucket to the editor deployment.
+Using them, the provider and editor specify their connection to the other deployment.
+The provider offers its bucket to the editor deployment.
 The editor specifies its expectation of the offer
 by defining a wish, allowing to use the offered bucket via `wish.offer`.
 </div>
@@ -105,13 +105,13 @@ new Offer(editor, 'bucket', bucket);
 ```
 {: .mb-n3 }
 </div>
-            <figcaption class="card-footer figure-caption text-center border-0">µs deployment definition of the hoster.</figcaption>
+            <figcaption class="card-footer figure-caption text-center border-0">µs deployment definition of the provider.</figcaption>
         </figure>
         <figure class="card border">
             <div class="card-header" markdown="1">
 ```ts
-const hoster = new RemoteConnection('hoster');
-const wish = new Wish<Bucket>(hoster, 'bucket');
+const provider = new RemoteConnection('provider');
+const wish = new Wish<Bucket>(provider, 'bucket');
 const index = new BucketObject('index', {
     bucket: wish.offer,
     content: content,

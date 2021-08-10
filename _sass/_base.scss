@@ -286,20 +286,20 @@ ol.bibliography {
     }
   }
 
-  .deployment-hoster, .remote-editor, .bucket, .offer, .dep-bucket-offer, .dep-remote-offer,
-  .deployment-editor, .remote-hoster, .wish, .index, .dep-remote-wish, .dep-wish-index, .dep-offer-wish {
+  .deployment-provider, .remote-editor, .bucket, .offer, .dep-bucket-offer, .dep-remote-offer,
+  .deployment-editor, .remote-provider, .wish, .index, .dep-remote-wish, .dep-wish-index, .dep-offer-wish {
     @include hideElementProps;
   }
 
   $animation: (
           'deployment-editor': ['hide', 'highlight', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'highlight', 'wait', 'wait', 'hide'],
-          'remote-hoster': ['hide', 'wait', 'highlight', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'highlight', 'hide'],
+          'remote-provider': ['hide', 'wait', 'highlight', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'highlight', 'hide'],
           'wish': ['hide', 'wait', 'wait', 'highlight', 'show', 'show', 'show', 'highlight', 'show', 'show', 'highlight', 'show', 'show', 'show', 'highlight', 'hide', 'hide'],
           'dep-remote-wish': ['hide', 'wait', 'wait', 'highlight', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'show', 'highlight', 'hide', 'hide'],
           'dep-offer-wish': ['hide', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'highlight', 'show', 'show', 'highlight', 'highlight', 'wait', 'wait', 'wait', 'hide', 'hide'],
           'index': ['hide', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'highlight', 'show', 'highlight', 'wait', 'wait', 'wait', 'hide', 'hide', 'hide'],
           'dep-wish-index': ['hide', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'wait', 'highlight', 'show', 'highlight', 'wait', 'wait', 'wait', 'hide', 'hide', 'hide'],
-          'deployment-hoster': ['hide', 'hide', 'hide', 'hide', 'highlight', 'show', 'show', 'show', 'show', 'highlight', 'wait', 'wait', 'wait', 'hide', 'hide', 'hide', 'hide'],
+          'deployment-provider': ['hide', 'hide', 'hide', 'hide', 'highlight', 'show', 'show', 'show', 'show', 'highlight', 'wait', 'wait', 'wait', 'hide', 'hide', 'hide', 'hide'],
           'remote-editor': ['hide', 'hide', 'hide', 'hide', 'wait', 'highlight', 'show', 'show', 'show', 'show', 'show', 'show', 'highlight', 'hide', 'hide', 'hide', 'hide'],
           'offer': ['hide', 'hide', 'hide', 'hide', 'wait', 'wait', 'highlight', 'highlight', 'show', 'show', 'highlight', 'highlight', 'hide', 'hide', 'hide', 'hide', 'hide'],
           'dep-remote-offer': ['hide', 'hide', 'hide', 'hide', 'wait', 'wait', 'highlight', 'show', 'show', 'show', 'show', 'highlight', 'hide', 'hide', 'hide', 'hide', 'hide'],

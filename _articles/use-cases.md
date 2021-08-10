@@ -18,9 +18,9 @@ which we illustrate with the [webpage example]({{ '/#example' | relative_url }})
 
 µs enables teams to start their deployments independently without synchronization.
 Resources are asynchronously deployed once their dependencies are satisfied.
-E.g., the editor starts its deployment before the hoster.
+E.g., the editor starts its deployment before the provider.
 The index first remains not deployed as its dependency to the bucket is unsatisfied.
-Once the hoster deploys the bucket, µs deploys the editor's index page.
+Once the provider deploys the bucket, µs deploys the editor's index page.
 </div>
 <div class="col-12 col-lg-4" markdown="1">
 ## Safe Undeployment
@@ -29,14 +29,14 @@ Once the hoster deploys the bucket, µs deploys the editor's index page.
 are not deployed anymore, when *R* is undeployed.
 If *R* shall be undeployed, the undeployment of all resources depending on it is triggered
 and *R* is only undeployed after completion.
-E.g., when the hoster undeploys the bucket, µs automatically undeploys the editor's index page before.
+E.g., when the provider undeploys the bucket, µs automatically undeploys the editor's index page before.
 </div>
 <div class="col-12 col-lg-4" markdown="1">
 ## Reactive Updates
 
 µs automatically transports configuration changes across deployments, triggering reactive updates.
 E.g., the editor might show the bucket's name (`wish.offer.name`) in the content of the page.
-If the hoster updates the name of the bucket,
+If the provider updates the name of the bucket,
 this change is transported to the editor's deployment,
 which subsequently automatically updates the page's content to the new name.
 </div>
@@ -62,19 +62,19 @@ which subsequently automatically updates the page's content to the new name.
         <div class="card list-group">
             <label for="slide-1" class="list-group-item list-group-item-action">The editor starts their deployment.
                 <div class="list-group-flush">
-                    <label for="slide-2" class="list-group-item list-group-item-action">The remote connection to the hoster is deployed.</label>
+                    <label for="slide-2" class="list-group-item list-group-item-action">The remote connection to the provider is deployed.</label>
                     <label for="slide-3" class="list-group-item list-group-item-action">The wish for the bucket is deployed but unsatisfied. Therefore, index is not deployed.</label>
                 </div>
             </label>
-            <label for="slide-4" class="list-group-item list-group-item-action">The hoster starts their deployment.
+            <label for="slide-4" class="list-group-item list-group-item-action">The provider starts their deployment.
                 <div class="list-group-flush">
                     <label for="slide-5" class="list-group-item list-group-item-action">The remote connection to the editor and the bucket are deployed in parallel.</label>
                     <label for="slide-6" class="list-group-item list-group-item-action">The offer is deployed.</label>
-                    <label for="slide-7" class="list-group-item list-group-item-action">The offer is forwarded to the hoster.</label>
+                    <label for="slide-7" class="list-group-item list-group-item-action">The offer is forwarded to the editor.</label>
                     <label for="slide-8" class="list-group-item list-group-item-action">The index is deployed automatically, because the wish it depends on is now satisfied.</label>
                 </div>
             </label>
-            <label for="slide-9" class="list-group-item list-group-item-action">The hoster stops their deployment.
+            <label for="slide-9" class="list-group-item list-group-item-action">The provider stops their deployment.
                 <div class="list-group-flush">
                     <label for="slide-10" class="list-group-item list-group-item-action">The offer withdrawal is sent to the editor deployment, which automatically undeploys the index, because the wish turns unsatisfied.</label>
                     <label for="slide-11" class="list-group-item list-group-item-action">The editor signals that no resource depending on the wish is deployed anymore, which completes the undeployment of the offer.</label>
@@ -84,7 +84,7 @@ which subsequently automatically updates the page's content to the new name.
             <label for="slide-13" class="list-group-item list-group-item-action">The editor stops their deployment.
                 <div class="list-group-flush">
                     <label for="slide-14" class="list-group-item list-group-item-action">The wish is undeployed.</label>
-                    <label for="slide-15" class="list-group-item list-group-item-action">The remote connection to the hoster is undeployed.</label>
+                    <label for="slide-15" class="list-group-item list-group-item-action">The remote connection to the provider is undeployed.</label>
                 </div>
             </label>
         </div>

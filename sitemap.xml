@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://mjuz.rocks/articles/example</loc>
+<lastmod>2021-08-16T06:54:42+00:00</lastmod>
+</url>
+<url>
+<loc>https://mjuz.rocks/articles/mjuz</loc>
+<lastmod>2021-08-16T06:54:42+00:00</lastmod>
+</url>
+<url>
+<loc>https://mjuz.rocks/articles/publications</loc>
+<lastmod>2021-08-16T06:54:42+00:00</lastmod>
+</url>
+<url>
+<loc>https://mjuz.rocks/articles/use-cases</loc>
+<lastmod>2021-08-16T06:54:42+00:00</lastmod>
+</url>
+<url>
+<loc>https://mjuz.rocks/</loc>
+</url>
+<url>
+<loc>https://mjuz.rocks/impressum</loc>
+</url>
+<url>
+<loc>https://mjuz.rocks/assets/pdf/papers/2021_Automating-Serverless-Deployments-for-DevOps-Organizations.pdf</loc>
+<lastmod>2021-08-16T06:54:33+00:00</lastmod>
+</url>
+<url>
+<loc>https://mjuz.rocks/assets/pdf/papers/2021_Deployment-Coordination-for-Cross-Functional-DevOps-Teams.pdf</loc>
+<lastmod>2021-08-16T06:54:33+00:00</lastmod>
+</url>
+</urlset>

@@ -1,0 +1,1516 @@
+/******************************************************************************* Variables used throughout the theme. To adjust anything, simply edit the variables below and rebuild the theme. */
+.bg-primary { background-color: #0d98ba !important; }
+
+a { color: #0d98ba; }
+
+a:hover { color: #28788c; }
+
+.navbar-height { height: 46px; }
+
+@media (min-width: 576px) { .navbar-height { height: 58px; } }
+
+.pnav { padding-top: 46px; }
+
+@media (min-width: 576px) { .pnav { padding-top: 58px; } }
+
+article:before { margin-top: -46px; height: 46px; content: ""; display: block; }
+
+@media (min-width: 576px) { article:before { margin-top: -58px; height: 58px; } }
+
+span.mjuz { position: relative; font-family: "Times New Roman"; display: inline-block; transform: scale(1.6, 1.6) translate(0.1em, 0.04em); overflow: hidden; line-height: 1.2em; height: 1.2em; width: 1.3em; word-break: break-all; margin-top: -1em; }
+
+span.mjuz:first-letter { font-style: italic; margin-right: 100%; margin-left: .1em; text-transform: lowercase; }
+
+span.mjuz:after { content: 'S'; position: absolute; font-weight: inherit; top: 0; left: 0; transform: scale(0.65, 0.65) translate(0.8em, 0.17em); }
+
+.h1 span.mjuz:after, .h2 span.mjuz:after, .h3 span.mjuz:after, .h4 span.mjuz:after, .h5 span.mjuz:after, .h6 span.mjuz:after, h1 span.mjuz:after, h2 span.mjuz:after, h3 span.mjuz:after, h4 span.mjuz:after, h5 span.mjuz:after, h6 span.mjuz:after { font-weight: bold; }
+
+.jumbotron { background: linear-gradient(115deg, white 40%, #0d98ba 75%); }
+
+.jumbotron h1 { font-weight: normal; width: 350px; max-width: 100%; font-size: 1.8rem; }
+
+.jumbotron h1 img { margin: -10% -18% 0 -18%; width: 128%; max-height: 80vh; }
+
+.jumbotron .card img { height: 150px; width: 150px; }
+
+.jumbotron .container:first-child { min-height: min(900px, 75vh); }
+
+ol.bibliography { list-style: none; padding: 0; margin-top: 0; }
+
+ol.bibliography li { margin-bottom: 2rem; }
+
+ol.bibliography li .abbr { display: inline; text-align: right; float: right; }
+
+#uc-anim input { display: none; }
+
+#uc-anim .form-check-input[type="radio"]:after { width: .625rem; height: .625rem; transform: translate(-50%, -50%); background: transparent; position: absolute; left: 50%; top: 50%; }
+
+#uc-anim .controls label[for="play"] .fa-play { font-size: .8rem; transform: translate(5%, -40%); }
+
+#uc-anim #play:checked ~ .controls label[for="play"] { color: #0d98ba; border-color: #0d98ba; }
+
+#uc-anim .captions { min-height: 606px; }
+
+@media (min-width: 576px) { #uc-anim .captions { min-height: 401px; } }
+
+@media (min-width: 768px) { #uc-anim .captions { min-height: 350px; } }
+
+@media (min-width: 992px) { #uc-anim .captions { min-height: 427px; } }
+
+@media (min-width: 1400px) { #uc-anim .captions { min-height: 367px; } }
+
+#uc-anim .captions label { cursor: pointer; }
+
+#uc-anim .captions .list-group-flush { margin-top: .5rem; margin-bottom: -.5rem; margin-right: -1.5rem; max-height: 0; opacity: 0; visibility: hidden; transition: max-height .5s, opacity .5s; }
+
+#uc-anim .deployment-provider, #uc-anim .remote-editor, #uc-anim .bucket, #uc-anim .offer, #uc-anim .dep-bucket-offer, #uc-anim .dep-remote-offer, #uc-anim .deployment-editor, #uc-anim .remote-provider, #uc-anim .wish, #uc-anim .index, #uc-anim .dep-remote-wish, #uc-anim .dep-wish-index, #uc-anim .dep-offer-wish { fill: #000000; opacity: 0; }
+
+#uc-anim .deployment-editor { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .deployment-editor { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .deployment-editor { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-2:checked ~ .controls .deployment-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-3:checked ~ .controls .deployment-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-4:checked ~ .controls .deployment-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-5:checked ~ .controls .deployment-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-6:checked ~ .controls .deployment-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-7:checked ~ .controls .deployment-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-8:checked ~ .controls .deployment-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .deployment-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .deployment-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .deployment-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-12:checked ~ .controls .deployment-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-13:checked ~ .controls .deployment-editor { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-14:checked ~ .controls .deployment-editor { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-15:checked ~ .controls .deployment-editor { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-16:checked ~ .controls .deployment-editor { fill: #000000; opacity: 0; }
+
+@keyframes deployment-editorAnimation { 4.5833333333% { fill: #000000;
+    opacity: 0; }
+  6.25% { fill: #0d98ba;
+    opacity: 1; }
+  10.8333333333% { fill: #0d98ba;
+    opacity: 1; }
+  12.5% { fill: #000000;
+    opacity: 1; }
+  79.5833333333% { fill: #000000;
+    opacity: 1; }
+  81.25% { fill: #0d98ba;
+    opacity: 1; }
+  85.8333333333% { fill: #0d98ba;
+    opacity: 1; }
+  87.5% { fill: #000000;
+    opacity: 0.2; }
+  98.3333333333% { fill: #000000;
+    opacity: 0.2; }
+  100% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .remote-provider { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .remote-provider { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .remote-provider { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-2:checked ~ .controls .remote-provider { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-3:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-4:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-5:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-6:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-7:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-8:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-12:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-13:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-14:checked ~ .controls .remote-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-15:checked ~ .controls .remote-provider { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-16:checked ~ .controls .remote-provider { fill: #000000; opacity: 0; }
+
+@keyframes remote-providerAnimation { 4.5833333333% { fill: #000000;
+    opacity: 0; }
+  6.25% { fill: #000000;
+    opacity: 0.2; }
+  10.8333333333% { fill: #000000;
+    opacity: 0.2; }
+  12.5% { fill: #0d98ba;
+    opacity: 1; }
+  17.0833333333% { fill: #0d98ba;
+    opacity: 1; }
+  18.75% { fill: #000000;
+    opacity: 1; }
+  92.0833333333% { fill: #000000;
+    opacity: 1; }
+  93.75% { fill: #0d98ba;
+    opacity: 1; }
+  98.3333333333% { fill: #0d98ba;
+    opacity: 1; }
+  100% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .wish { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .wish { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-2:checked ~ .controls .wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-3:checked ~ .controls .wish { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-4:checked ~ .controls .wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-5:checked ~ .controls .wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-6:checked ~ .controls .wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-7:checked ~ .controls .wish { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-8:checked ~ .controls .wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .wish { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-12:checked ~ .controls .wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-13:checked ~ .controls .wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-14:checked ~ .controls .wish { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-15:checked ~ .controls .wish { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-16:checked ~ .controls .wish { fill: #000000; opacity: 0; }
+
+@keyframes wishAnimation { 4.5833333333% { fill: #000000;
+    opacity: 0; }
+  6.25% { fill: #000000;
+    opacity: 0.2; }
+  17.0833333333% { fill: #000000;
+    opacity: 0.2; }
+  18.75% { fill: #0d98ba;
+    opacity: 1; }
+  23.3333333333% { fill: #0d98ba;
+    opacity: 1; }
+  25% { fill: #000000;
+    opacity: 1; }
+  42.0833333333% { fill: #000000;
+    opacity: 1; }
+  43.75% { fill: #0d98ba;
+    opacity: 1; }
+  48.3333333333% { fill: #0d98ba;
+    opacity: 1; }
+  50% { fill: #000000;
+    opacity: 1; }
+  60.8333333333% { fill: #000000;
+    opacity: 1; }
+  62.5% { fill: #0d98ba;
+    opacity: 1; }
+  67.0833333333% { fill: #0d98ba;
+    opacity: 1; }
+  68.75% { fill: #000000;
+    opacity: 1; }
+  85.8333333333% { fill: #000000;
+    opacity: 1; }
+  87.5% { fill: #0d98ba;
+    opacity: 1; }
+  92.0833333333% { fill: #0d98ba;
+    opacity: 1; }
+  93.75% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .dep-remote-wish { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-2:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-3:checked ~ .controls .dep-remote-wish { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-4:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-5:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-6:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-7:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-8:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-12:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-13:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-14:checked ~ .controls .dep-remote-wish { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-15:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-16:checked ~ .controls .dep-remote-wish { fill: #000000; opacity: 0; }
+
+@keyframes dep-remote-wishAnimation { 4.5833333333% { fill: #000000;
+    opacity: 0; }
+  6.25% { fill: #000000;
+    opacity: 0.2; }
+  17.0833333333% { fill: #000000;
+    opacity: 0.2; }
+  18.75% { fill: #0d98ba;
+    opacity: 1; }
+  23.3333333333% { fill: #0d98ba;
+    opacity: 1; }
+  25% { fill: #000000;
+    opacity: 1; }
+  85.8333333333% { fill: #000000;
+    opacity: 1; }
+  87.5% { fill: #0d98ba;
+    opacity: 1; }
+  92.0833333333% { fill: #0d98ba;
+    opacity: 1; }
+  93.75% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .dep-offer-wish { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-2:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-3:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-4:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-5:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-6:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-7:checked ~ .controls .dep-offer-wish { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-8:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .dep-offer-wish { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .dep-offer-wish { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-12:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-13:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-14:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-15:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-16:checked ~ .controls .dep-offer-wish { fill: #000000; opacity: 0; }
+
+@keyframes dep-offer-wishAnimation { 4.5833333333% { fill: #000000;
+    opacity: 0; }
+  6.25% { fill: #000000;
+    opacity: 0.2; }
+  42.0833333333% { fill: #000000;
+    opacity: 0.2; }
+  43.75% { fill: #0d98ba;
+    opacity: 1; }
+  48.3333333333% { fill: #0d98ba;
+    opacity: 1; }
+  50% { fill: #000000;
+    opacity: 1; }
+  60.8333333333% { fill: #000000;
+    opacity: 1; }
+  62.5% { fill: #0d98ba;
+    opacity: 1; }
+  73.3333333333% { fill: #0d98ba;
+    opacity: 1; }
+  75% { fill: #000000;
+    opacity: 0.2; }
+  92.0833333333% { fill: #000000;
+    opacity: 0.2; }
+  93.75% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .index { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .index { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-2:checked ~ .controls .index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-3:checked ~ .controls .index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-4:checked ~ .controls .index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-5:checked ~ .controls .index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-6:checked ~ .controls .index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-7:checked ~ .controls .index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-8:checked ~ .controls .index { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .index { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .index { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-12:checked ~ .controls .index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-13:checked ~ .controls .index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-14:checked ~ .controls .index { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-15:checked ~ .controls .index { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-16:checked ~ .controls .index { fill: #000000; opacity: 0; }
+
+@keyframes indexAnimation { 4.5833333333% { fill: #000000;
+    opacity: 0; }
+  6.25% { fill: #000000;
+    opacity: 0.2; }
+  48.3333333333% { fill: #000000;
+    opacity: 0.2; }
+  50% { fill: #0d98ba;
+    opacity: 1; }
+  54.5833333333% { fill: #0d98ba;
+    opacity: 1; }
+  56.25% { fill: #000000;
+    opacity: 1; }
+  60.8333333333% { fill: #000000;
+    opacity: 1; }
+  62.5% { fill: #0d98ba;
+    opacity: 1; }
+  67.0833333333% { fill: #0d98ba;
+    opacity: 1; }
+  68.75% { fill: #000000;
+    opacity: 0.2; }
+  85.8333333333% { fill: #000000;
+    opacity: 0.2; }
+  87.5% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .dep-wish-index { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-2:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-3:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-4:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-5:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-6:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-7:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-8:checked ~ .controls .dep-wish-index { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .dep-wish-index { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-12:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-13:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-14:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-15:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-16:checked ~ .controls .dep-wish-index { fill: #000000; opacity: 0; }
+
+@keyframes dep-wish-indexAnimation { 4.5833333333% { fill: #000000;
+    opacity: 0; }
+  6.25% { fill: #000000;
+    opacity: 0.2; }
+  48.3333333333% { fill: #000000;
+    opacity: 0.2; }
+  50% { fill: #0d98ba;
+    opacity: 1; }
+  54.5833333333% { fill: #0d98ba;
+    opacity: 1; }
+  56.25% { fill: #000000;
+    opacity: 1; }
+  60.8333333333% { fill: #000000;
+    opacity: 1; }
+  62.5% { fill: #0d98ba;
+    opacity: 1; }
+  67.0833333333% { fill: #0d98ba;
+    opacity: 1; }
+  68.75% { fill: #000000;
+    opacity: 0.2; }
+  85.8333333333% { fill: #000000;
+    opacity: 0.2; }
+  87.5% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .deployment-provider { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .deployment-provider { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .deployment-provider { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-2:checked ~ .controls .deployment-provider { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-3:checked ~ .controls .deployment-provider { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-4:checked ~ .controls .deployment-provider { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-5:checked ~ .controls .deployment-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-6:checked ~ .controls .deployment-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-7:checked ~ .controls .deployment-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-8:checked ~ .controls .deployment-provider { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .deployment-provider { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .deployment-provider { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-11:checked ~ .controls .deployment-provider { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-12:checked ~ .controls .deployment-provider { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-13:checked ~ .controls .deployment-provider { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-14:checked ~ .controls .deployment-provider { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-15:checked ~ .controls .deployment-provider { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-16:checked ~ .controls .deployment-provider { fill: #000000; opacity: 0; }
+
+@keyframes deployment-providerAnimation { 23.3333333333% { fill: #000000;
+    opacity: 0; }
+  25% { fill: #0d98ba;
+    opacity: 1; }
+  29.5833333333% { fill: #0d98ba;
+    opacity: 1; }
+  31.25% { fill: #000000;
+    opacity: 1; }
+  54.5833333333% { fill: #000000;
+    opacity: 1; }
+  56.25% { fill: #0d98ba;
+    opacity: 1; }
+  60.8333333333% { fill: #0d98ba;
+    opacity: 1; }
+  62.5% { fill: #000000;
+    opacity: 0.2; }
+  79.5833333333% { fill: #000000;
+    opacity: 0.2; }
+  81.25% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .remote-editor { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .remote-editor { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .remote-editor { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-2:checked ~ .controls .remote-editor { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-3:checked ~ .controls .remote-editor { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-4:checked ~ .controls .remote-editor { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-5:checked ~ .controls .remote-editor { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-6:checked ~ .controls .remote-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-7:checked ~ .controls .remote-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-8:checked ~ .controls .remote-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .remote-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .remote-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .remote-editor { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-12:checked ~ .controls .remote-editor { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-13:checked ~ .controls .remote-editor { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-14:checked ~ .controls .remote-editor { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-15:checked ~ .controls .remote-editor { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-16:checked ~ .controls .remote-editor { fill: #000000; opacity: 0; }
+
+@keyframes remote-editorAnimation { 23.3333333333% { fill: #000000;
+    opacity: 0; }
+  25% { fill: #000000;
+    opacity: 0.2; }
+  29.5833333333% { fill: #000000;
+    opacity: 0.2; }
+  31.25% { fill: #0d98ba;
+    opacity: 1; }
+  35.8333333333% { fill: #0d98ba;
+    opacity: 1; }
+  37.5% { fill: #000000;
+    opacity: 1; }
+  73.3333333333% { fill: #000000;
+    opacity: 1; }
+  75% { fill: #0d98ba;
+    opacity: 1; }
+  79.5833333333% { fill: #0d98ba;
+    opacity: 1; }
+  81.25% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .offer { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-2:checked ~ .controls .offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-3:checked ~ .controls .offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-4:checked ~ .controls .offer { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-5:checked ~ .controls .offer { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-6:checked ~ .controls .offer { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-7:checked ~ .controls .offer { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-8:checked ~ .controls .offer { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .offer { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .offer { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .offer { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-12:checked ~ .controls .offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-13:checked ~ .controls .offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-14:checked ~ .controls .offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-15:checked ~ .controls .offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-16:checked ~ .controls .offer { fill: #000000; opacity: 0; }
+
+@keyframes offerAnimation { 23.3333333333% { fill: #000000;
+    opacity: 0; }
+  25% { fill: #000000;
+    opacity: 0.2; }
+  35.8333333333% { fill: #000000;
+    opacity: 0.2; }
+  37.5% { fill: #0d98ba;
+    opacity: 1; }
+  48.3333333333% { fill: #0d98ba;
+    opacity: 1; }
+  50% { fill: #000000;
+    opacity: 1; }
+  60.8333333333% { fill: #000000;
+    opacity: 1; }
+  62.5% { fill: #0d98ba;
+    opacity: 1; }
+  73.3333333333% { fill: #0d98ba;
+    opacity: 1; }
+  75% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .dep-remote-offer { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-2:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-3:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-4:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-5:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-6:checked ~ .controls .dep-remote-offer { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-7:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-8:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .dep-remote-offer { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-12:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-13:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-14:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-15:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-16:checked ~ .controls .dep-remote-offer { fill: #000000; opacity: 0; }
+
+@keyframes dep-remote-offerAnimation { 23.3333333333% { fill: #000000;
+    opacity: 0; }
+  25% { fill: #000000;
+    opacity: 0.2; }
+  35.8333333333% { fill: #000000;
+    opacity: 0.2; }
+  37.5% { fill: #0d98ba;
+    opacity: 1; }
+  42.0833333333% { fill: #0d98ba;
+    opacity: 1; }
+  43.75% { fill: #000000;
+    opacity: 1; }
+  67.0833333333% { fill: #000000;
+    opacity: 1; }
+  68.75% { fill: #0d98ba;
+    opacity: 1; }
+  73.3333333333% { fill: #0d98ba;
+    opacity: 1; }
+  75% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .dep-bucket-offer { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-2:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-3:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-4:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-5:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-6:checked ~ .controls .dep-bucket-offer { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-7:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-8:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .dep-bucket-offer { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-12:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-13:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-14:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-15:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-16:checked ~ .controls .dep-bucket-offer { fill: #000000; opacity: 0; }
+
+@keyframes dep-bucket-offerAnimation { 23.3333333333% { fill: #000000;
+    opacity: 0; }
+  25% { fill: #000000;
+    opacity: 0.2; }
+  35.8333333333% { fill: #000000;
+    opacity: 0.2; }
+  37.5% { fill: #0d98ba;
+    opacity: 1; }
+  42.0833333333% { fill: #0d98ba;
+    opacity: 1; }
+  43.75% { fill: #000000;
+    opacity: 1; }
+  67.0833333333% { fill: #000000;
+    opacity: 1; }
+  68.75% { fill: #0d98ba;
+    opacity: 1; }
+  73.3333333333% { fill: #0d98ba;
+    opacity: 1; }
+  75% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim .bucket { transition: opacity 1s, fill 1s; }
+
+#uc-anim #slide-0:checked ~ .controls .bucket { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-1:checked ~ .controls .bucket { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-2:checked ~ .controls .bucket { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-3:checked ~ .controls .bucket { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-4:checked ~ .controls .bucket { fill: #000000; opacity: 0.2; }
+
+#uc-anim #slide-5:checked ~ .controls .bucket { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-6:checked ~ .controls .bucket { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-7:checked ~ .controls .bucket { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-8:checked ~ .controls .bucket { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-9:checked ~ .controls .bucket { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-10:checked ~ .controls .bucket { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-11:checked ~ .controls .bucket { fill: #000000; opacity: 1; }
+
+#uc-anim #slide-12:checked ~ .controls .bucket { fill: #0d98ba; opacity: 1; }
+
+#uc-anim #slide-13:checked ~ .controls .bucket { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-14:checked ~ .controls .bucket { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-15:checked ~ .controls .bucket { fill: #000000; opacity: 0; }
+
+#uc-anim #slide-16:checked ~ .controls .bucket { fill: #000000; opacity: 0; }
+
+@keyframes bucketAnimation { 23.3333333333% { fill: #000000;
+    opacity: 0; }
+  25% { fill: #000000;
+    opacity: 0.2; }
+  29.5833333333% { fill: #000000;
+    opacity: 0.2; }
+  31.25% { fill: #0d98ba;
+    opacity: 1; }
+  35.8333333333% { fill: #0d98ba;
+    opacity: 1; }
+  37.5% { fill: #000000;
+    opacity: 1; }
+  73.3333333333% { fill: #000000;
+    opacity: 1; }
+  75% { fill: #0d98ba;
+    opacity: 1; }
+  79.5833333333% { fill: #0d98ba;
+    opacity: 1; }
+  81.25% { fill: #000000;
+    opacity: 0; } }
+
+#uc-anim #slide-1:checked ~ .controls label[for="slide-1"] { border-color: #0d98ba; }
+
+#uc-anim #slide-1:checked ~ .controls label[for="slide-1"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-1:checked ~ .captions label[for="slide-1"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-2:checked ~ .controls label[for="slide-2"] { border-color: #0d98ba; }
+
+#uc-anim #slide-2:checked ~ .controls label[for="slide-2"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-2:checked ~ .captions label[for="slide-2"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-3:checked ~ .controls label[for="slide-3"] { border-color: #0d98ba; }
+
+#uc-anim #slide-3:checked ~ .controls label[for="slide-3"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-3:checked ~ .captions label[for="slide-3"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-4:checked ~ .controls label[for="slide-4"] { border-color: #0d98ba; }
+
+#uc-anim #slide-4:checked ~ .controls label[for="slide-4"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-4:checked ~ .captions label[for="slide-4"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-5:checked ~ .controls label[for="slide-5"] { border-color: #0d98ba; }
+
+#uc-anim #slide-5:checked ~ .controls label[for="slide-5"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-5:checked ~ .captions label[for="slide-5"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-6:checked ~ .controls label[for="slide-6"] { border-color: #0d98ba; }
+
+#uc-anim #slide-6:checked ~ .controls label[for="slide-6"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-6:checked ~ .captions label[for="slide-6"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-7:checked ~ .controls label[for="slide-7"] { border-color: #0d98ba; }
+
+#uc-anim #slide-7:checked ~ .controls label[for="slide-7"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-7:checked ~ .captions label[for="slide-7"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-8:checked ~ .controls label[for="slide-8"] { border-color: #0d98ba; }
+
+#uc-anim #slide-8:checked ~ .controls label[for="slide-8"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-8:checked ~ .captions label[for="slide-8"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-9:checked ~ .controls label[for="slide-9"] { border-color: #0d98ba; }
+
+#uc-anim #slide-9:checked ~ .controls label[for="slide-9"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-9:checked ~ .captions label[for="slide-9"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-10:checked ~ .controls label[for="slide-10"] { border-color: #0d98ba; }
+
+#uc-anim #slide-10:checked ~ .controls label[for="slide-10"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-10:checked ~ .captions label[for="slide-10"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-11:checked ~ .controls label[for="slide-11"] { border-color: #0d98ba; }
+
+#uc-anim #slide-11:checked ~ .controls label[for="slide-11"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-11:checked ~ .captions label[for="slide-11"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-12:checked ~ .controls label[for="slide-12"] { border-color: #0d98ba; }
+
+#uc-anim #slide-12:checked ~ .controls label[for="slide-12"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-12:checked ~ .captions label[for="slide-12"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-13:checked ~ .controls label[for="slide-13"] { border-color: #0d98ba; }
+
+#uc-anim #slide-13:checked ~ .controls label[for="slide-13"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-13:checked ~ .captions label[for="slide-13"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-14:checked ~ .controls label[for="slide-14"] { border-color: #0d98ba; }
+
+#uc-anim #slide-14:checked ~ .controls label[for="slide-14"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-14:checked ~ .captions label[for="slide-14"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-15:checked ~ .controls label[for="slide-15"] { border-color: #0d98ba; }
+
+#uc-anim #slide-15:checked ~ .controls label[for="slide-15"]:after { background-color: #0d98ba; }
+
+#uc-anim #slide-15:checked ~ .captions label[for="slide-15"] { background-color: #0d98ba; border-color: #0d98ba; color: #ffffff; }
+
+#uc-anim #slide-1:checked ~ .captions label[for="slide-1"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+#uc-anim #slide-2:checked ~ .captions label[for="slide-1"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+#uc-anim #slide-3:checked ~ .captions label[for="slide-1"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+@keyframes captionGroupAnimation1 { 4.5833333333% { opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition-delay: 0s; }
+  6.25% { opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    transition-delay: .5s; }
+  21.6666666667% { opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    transition-delay: .5s; }
+  23.3333333333% { opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition-delay: 0s; } }
+
+#uc-anim #slide-4:checked ~ .captions label[for="slide-4"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+#uc-anim #slide-5:checked ~ .captions label[for="slide-4"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+#uc-anim #slide-6:checked ~ .captions label[for="slide-4"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+#uc-anim #slide-7:checked ~ .captions label[for="slide-4"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+#uc-anim #slide-8:checked ~ .captions label[for="slide-4"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+@keyframes captionGroupAnimation4 { 23.3333333333% { opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition-delay: 0s; }
+  25% { opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    transition-delay: .5s; }
+  52.9166666667% { opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    transition-delay: .5s; }
+  54.5833333333% { opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition-delay: 0s; } }
+
+#uc-anim #slide-9:checked ~ .captions label[for="slide-9"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+#uc-anim #slide-10:checked ~ .captions label[for="slide-9"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+#uc-anim #slide-11:checked ~ .captions label[for="slide-9"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+#uc-anim #slide-12:checked ~ .captions label[for="slide-9"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+@keyframes captionGroupAnimation9 { 54.5833333333% { opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition-delay: 0s; }
+  56.25% { opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    transition-delay: .5s; }
+  77.9166666667% { opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    transition-delay: .5s; }
+  79.5833333333% { opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition-delay: 0s; } }
+
+#uc-anim #slide-13:checked ~ .captions label[for="slide-13"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+#uc-anim #slide-14:checked ~ .captions label[for="slide-13"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+#uc-anim #slide-15:checked ~ .captions label[for="slide-13"] .list-group-flush { opacity: 1; visibility: visible; max-height: 500px; transition-delay: .5s; }
+
+@keyframes captionGroupAnimation13 { 79.5833333333% { opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition-delay: 0s; }
+  81.25% { opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    transition-delay: .5s; }
+  96.6666666667% { opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    transition-delay: .5s; }
+  98.3333333333% { opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    transition-delay: 0s; } }
+
+@keyframes activeControlAnimation1 { 4.5833333333% { border-color: #757575; }
+  6.25% { border-color: #0d98ba; }
+  10.8333333333% { border-color: #0d98ba; }
+  12.5% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation1 { 4.5833333333% { background-color: transparent; }
+  6.25% { background-color: #0d98ba; }
+  10.8333333333% { background-color: #0d98ba; }
+  12.5% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation1 { 4.5833333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  6.25% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  10.8333333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  12.5% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation2 { 10.8333333333% { border-color: #757575; }
+  12.5% { border-color: #0d98ba; }
+  17.0833333333% { border-color: #0d98ba; }
+  18.75% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation2 { 10.8333333333% { background-color: transparent; }
+  12.5% { background-color: #0d98ba; }
+  17.0833333333% { background-color: #0d98ba; }
+  18.75% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation2 { 10.8333333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  12.5% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  17.0833333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  18.75% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation3 { 17.0833333333% { border-color: #757575; }
+  18.75% { border-color: #0d98ba; }
+  23.3333333333% { border-color: #0d98ba; }
+  25% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation3 { 17.0833333333% { background-color: transparent; }
+  18.75% { background-color: #0d98ba; }
+  23.3333333333% { background-color: #0d98ba; }
+  25% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation3 { 17.0833333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  18.75% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  23.3333333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  25% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation4 { 23.3333333333% { border-color: #757575; }
+  25% { border-color: #0d98ba; }
+  29.5833333333% { border-color: #0d98ba; }
+  31.25% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation4 { 23.3333333333% { background-color: transparent; }
+  25% { background-color: #0d98ba; }
+  29.5833333333% { background-color: #0d98ba; }
+  31.25% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation4 { 23.3333333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  25% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  29.5833333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  31.25% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation5 { 29.5833333333% { border-color: #757575; }
+  31.25% { border-color: #0d98ba; }
+  35.8333333333% { border-color: #0d98ba; }
+  37.5% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation5 { 29.5833333333% { background-color: transparent; }
+  31.25% { background-color: #0d98ba; }
+  35.8333333333% { background-color: #0d98ba; }
+  37.5% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation5 { 29.5833333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  31.25% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  35.8333333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  37.5% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation6 { 35.8333333333% { border-color: #757575; }
+  37.5% { border-color: #0d98ba; }
+  42.0833333333% { border-color: #0d98ba; }
+  43.75% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation6 { 35.8333333333% { background-color: transparent; }
+  37.5% { background-color: #0d98ba; }
+  42.0833333333% { background-color: #0d98ba; }
+  43.75% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation6 { 35.8333333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  37.5% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  42.0833333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  43.75% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation7 { 42.0833333333% { border-color: #757575; }
+  43.75% { border-color: #0d98ba; }
+  48.3333333333% { border-color: #0d98ba; }
+  50% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation7 { 42.0833333333% { background-color: transparent; }
+  43.75% { background-color: #0d98ba; }
+  48.3333333333% { background-color: #0d98ba; }
+  50% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation7 { 42.0833333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  43.75% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  48.3333333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  50% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation8 { 48.3333333333% { border-color: #757575; }
+  50% { border-color: #0d98ba; }
+  54.5833333333% { border-color: #0d98ba; }
+  56.25% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation8 { 48.3333333333% { background-color: transparent; }
+  50% { background-color: #0d98ba; }
+  54.5833333333% { background-color: #0d98ba; }
+  56.25% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation8 { 48.3333333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  50% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  54.5833333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  56.25% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation9 { 54.5833333333% { border-color: #757575; }
+  56.25% { border-color: #0d98ba; }
+  60.8333333333% { border-color: #0d98ba; }
+  62.5% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation9 { 54.5833333333% { background-color: transparent; }
+  56.25% { background-color: #0d98ba; }
+  60.8333333333% { background-color: #0d98ba; }
+  62.5% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation9 { 54.5833333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  56.25% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  60.8333333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  62.5% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation10 { 60.8333333333% { border-color: #757575; }
+  62.5% { border-color: #0d98ba; }
+  67.0833333333% { border-color: #0d98ba; }
+  68.75% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation10 { 60.8333333333% { background-color: transparent; }
+  62.5% { background-color: #0d98ba; }
+  67.0833333333% { background-color: #0d98ba; }
+  68.75% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation10 { 60.8333333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  62.5% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  67.0833333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  68.75% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation11 { 67.0833333333% { border-color: #757575; }
+  68.75% { border-color: #0d98ba; }
+  73.3333333333% { border-color: #0d98ba; }
+  75% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation11 { 67.0833333333% { background-color: transparent; }
+  68.75% { background-color: #0d98ba; }
+  73.3333333333% { background-color: #0d98ba; }
+  75% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation11 { 67.0833333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  68.75% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  73.3333333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  75% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation12 { 73.3333333333% { border-color: #757575; }
+  75% { border-color: #0d98ba; }
+  79.5833333333% { border-color: #0d98ba; }
+  81.25% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation12 { 73.3333333333% { background-color: transparent; }
+  75% { background-color: #0d98ba; }
+  79.5833333333% { background-color: #0d98ba; }
+  81.25% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation12 { 73.3333333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  75% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  79.5833333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  81.25% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation13 { 79.5833333333% { border-color: #757575; }
+  81.25% { border-color: #0d98ba; }
+  85.8333333333% { border-color: #0d98ba; }
+  87.5% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation13 { 79.5833333333% { background-color: transparent; }
+  81.25% { background-color: #0d98ba; }
+  85.8333333333% { background-color: #0d98ba; }
+  87.5% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation13 { 79.5833333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  81.25% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  85.8333333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  87.5% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation14 { 85.8333333333% { border-color: #757575; }
+  87.5% { border-color: #0d98ba; }
+  92.0833333333% { border-color: #0d98ba; }
+  93.75% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation14 { 85.8333333333% { background-color: transparent; }
+  87.5% { background-color: #0d98ba; }
+  92.0833333333% { background-color: #0d98ba; }
+  93.75% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation14 { 85.8333333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  87.5% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  92.0833333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  93.75% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+@keyframes activeControlAnimation15 { 92.0833333333% { border-color: #757575; }
+  93.75% { border-color: #0d98ba; }
+  98.3333333333% { border-color: #0d98ba; }
+  100% { border-color: #757575; } }
+
+@keyframes activeControlAfterAnimation15 { 92.0833333333% { background-color: transparent; }
+  93.75% { background-color: #0d98ba; }
+  98.3333333333% { background-color: #0d98ba; }
+  100% { background-color: transparent; } }
+
+@keyframes hightlightCaptionAnimation15 { 92.0833333333% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; }
+  93.75% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  98.3333333333% { background-color: #0d98ba;
+    border-color: #0d98ba;
+    color: #ffffff; }
+  100% { background-color: #ffffff;
+    border-color: rgba(0, 0, 0, 0.125);
+    color: #616161; } }
+
+#uc-anim #play:checked ~ .controls .deployment-editor { animation: deployment-editorAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .remote-provider { animation: remote-providerAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .wish { animation: wishAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .dep-remote-wish { animation: dep-remote-wishAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .dep-offer-wish { animation: dep-offer-wishAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .index { animation: indexAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .dep-wish-index { animation: dep-wish-indexAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .deployment-provider { animation: deployment-providerAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .remote-editor { animation: remote-editorAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .offer { animation: offerAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .dep-remote-offer { animation: dep-remote-offerAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .dep-bucket-offer { animation: dep-bucket-offerAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls .bucket { animation: bucketAnimation 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-1"] { animation: activeControlAnimation1 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-1"]:after { animation: activeControlAfterAnimation1 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-1"] .list-group-flush { animation: captionGroupAnimation1 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-1"] { animation: hightlightCaptionAnimation1 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-2"] { animation: activeControlAnimation2 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-2"]:after { animation: activeControlAfterAnimation2 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-2"] .list-group-flush { animation: captionGroupAnimation2 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-2"] { animation: hightlightCaptionAnimation2 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-3"] { animation: activeControlAnimation3 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-3"]:after { animation: activeControlAfterAnimation3 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-3"] .list-group-flush { animation: captionGroupAnimation3 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-3"] { animation: hightlightCaptionAnimation3 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-4"] { animation: activeControlAnimation4 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-4"]:after { animation: activeControlAfterAnimation4 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-4"] .list-group-flush { animation: captionGroupAnimation4 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-4"] { animation: hightlightCaptionAnimation4 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-5"] { animation: activeControlAnimation5 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-5"]:after { animation: activeControlAfterAnimation5 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-5"] .list-group-flush { animation: captionGroupAnimation5 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-5"] { animation: hightlightCaptionAnimation5 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-6"] { animation: activeControlAnimation6 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-6"]:after { animation: activeControlAfterAnimation6 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-6"] .list-group-flush { animation: captionGroupAnimation6 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-6"] { animation: hightlightCaptionAnimation6 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-7"] { animation: activeControlAnimation7 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-7"]:after { animation: activeControlAfterAnimation7 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-7"] .list-group-flush { animation: captionGroupAnimation7 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-7"] { animation: hightlightCaptionAnimation7 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-8"] { animation: activeControlAnimation8 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-8"]:after { animation: activeControlAfterAnimation8 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-8"] .list-group-flush { animation: captionGroupAnimation8 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-8"] { animation: hightlightCaptionAnimation8 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-9"] { animation: activeControlAnimation9 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-9"]:after { animation: activeControlAfterAnimation9 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-9"] .list-group-flush { animation: captionGroupAnimation9 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-9"] { animation: hightlightCaptionAnimation9 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-10"] { animation: activeControlAnimation10 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-10"]:after { animation: activeControlAfterAnimation10 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-10"] .list-group-flush { animation: captionGroupAnimation10 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-10"] { animation: hightlightCaptionAnimation10 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-11"] { animation: activeControlAnimation11 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-11"]:after { animation: activeControlAfterAnimation11 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-11"] .list-group-flush { animation: captionGroupAnimation11 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-11"] { animation: hightlightCaptionAnimation11 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-12"] { animation: activeControlAnimation12 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-12"]:after { animation: activeControlAfterAnimation12 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-12"] .list-group-flush { animation: captionGroupAnimation12 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-12"] { animation: hightlightCaptionAnimation12 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-13"] { animation: activeControlAnimation13 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-13"]:after { animation: activeControlAfterAnimation13 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-13"] .list-group-flush { animation: captionGroupAnimation13 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-13"] { animation: hightlightCaptionAnimation13 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-14"] { animation: activeControlAnimation14 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-14"]:after { animation: activeControlAfterAnimation14 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-14"] .list-group-flush { animation: captionGroupAnimation14 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-14"] { animation: hightlightCaptionAnimation14 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-15"] { animation: activeControlAnimation15 60s infinite; }
+
+#uc-anim #play:checked ~ .controls label[for="slide-15"]:after { animation: activeControlAfterAnimation15 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-15"] .list-group-flush { animation: captionGroupAnimation15 60s infinite; }
+
+#uc-anim #play:checked ~ .captions label[for="slide-15"] { animation: hightlightCaptionAnimation15 60s infinite; }
+
+/*# sourceMappingURL=main.css.map */

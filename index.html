@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>µs Infrastructure as Code</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="µs Infrastructure as Code" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="µs ([mju:z] “muse”) is infrastructure as code for DevOps organizations. µs decentralizes coordination, is continuous and reactive, and is broadly compatible." />
+<meta property="og:description" content="µs ([mju:z] “muse”) is infrastructure as code for DevOps organizations. µs decentralizes coordination, is continuous and reactive, and is broadly compatible." />
+<link rel="canonical" href="https://mjuz.rocks/" />
+<meta property="og:url" content="https://mjuz.rocks/" />
+<meta property="og:site_name" content="µs Infrastructure as Code" />
+<meta property="og:image" content="https://mjuz.rocks/assets/img/og/mjuz.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://mjuz.rocks/assets/img/og/mjuz.png" />
+<meta property="twitter:title" content="µs Infrastructure as Code" />
+<script type="application/ld+json">
+{"@type":"WebSite","headline":"µs Infrastructure as Code","description":"µs ([mju:z] “muse”) is infrastructure as code for DevOps organizations. µs decentralizes coordination, is continuous and reactive, and is broadly compatible.","image":"https://mjuz.rocks/assets/img/og/mjuz.png","url":"https://mjuz.rocks/","name":"µs Infrastructure as Code","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<!-- Styles -->
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="stylesheet" href="/assets/css/bundle-8c8501da19b94a55e7980c5ed99400f5.css">
+<link rel="stylesheet" href="/assets/css/main.css?v=" />
+
+  </head>
+
+  <body class="bg-super-light">
+
+    <div class="pnav d-lg-none"></div>
+<main>
+    
+    
+    
+    
+        <article class="" id="mjuz">
+    
+    <div class="jumbotron" id="mjuz">
+    <div class="container d-flex">
+        <div class="row d-flex align-content-center overflow-hidden mt-5 mt-lg-0">
+            <div class="col-12 col-lg-6 d-flex align-items-center justify-content-center px-lg-3">
+                <h1 class="text-center">
+                    <img src="/assets/img/logo.svg" alt="µs" /><br />
+                    Infrastructure as Code for DevOps Organizations
+                </h1>
+            </div>
+            <div class="col-12 col-lg-6 my-5 my-lg-0">
+                <div class="decentralizes-coordination card border my-4">
+                    <div class="row g-0">
+                        <div class="col-12 col-sm-4 col-md-3 col-lg-4 col-xxl-3 d-flex align-items-center justify-content-center">
+                            <img src="/assets/img/decentralizes-coordination.svg" alt="Connected dots symbolizing decentralization" />
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-9 col-lg-8 col-xxl-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Decentralizes Coordination</h5>
+                                <p class="card-text">
+                                    <span class="mjuz">µs</span> safely coordinates the order of resource creations, updates, and deletions <i>across</i> deployments of independent DevOps teams.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="continuous-reactive card border my-4">
+                    <div class="row g-0">
+                        <div class="col-12 col-sm-4 col-md-3 col-lg-4 col-xxl-3 d-flex align-items-center justify-content-center">
+                            <img src="/assets/img/continuous-reactive.svg" alt="Circle of arrows symbolizing continuous, reactive execution" />
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-9 col-lg-8 col-xxl-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Continuous &amp; Reactive</h5>
+                                <p class="card-text">
+                                    <span class="mjuz">µs</span> deployments are continuously running and automatically adjust the infrastructure to its environment whenever it changes.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="broadly-compatible card border my-4">
+                    <div class="row g-0">
+                        <div class="col-12 col-sm-4 col-md-3 col-lg-4 col-xxl-3 d-flex align-items-center justify-content-center">
+                            <img src="/assets/img/broadly-compatible.svg" alt="Puzzle piece symbolizing compatibility" />
+                        </div>
+                        <div class="col-12 col-sm-8 col-md-9 col-lg-8 col-xxl-9">
+                            <div class="card-body">
+                                <h5 class="card-title">Broadly Compatible</h5>
+                                <p class="card-text">
+                                    <span class="mjuz">µs</span> builds on top of <a href="http://www.pulumi.com" target="_blank">Pulumi</a>
+                                    and supports its <a href="https://www.pulumi.com/docs/reference/pkg/#resource-documentation" target="_blank" class="text-reset">resource providers</a>
+                                    and all existing Pulumi TypeScript programs out-of-the-box.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="p-3" style="background-color: rgba(255, 255, 255, .7);">
+        <div class="my-3 text-center">
+            <p class="lead">
+                <span class="mjuz">µs</span> is open source: <a href="/#example">Find out more</a> below, read <a href="/#publications">the publications</a>
+                and <a href="https://github.com/mjuz-iac/mjuz" target="_blank"><i class="fab fa-github"></i> try it out</a>.
+            </p>
+            <p class="lead">
+                <a href="mailto:mjuz-rocks@d.sokolowski.org">Talk to us</a> if you are interested or have ideas!
+            </p>
+        </div>
+    </div>
+</div>
+
+</article>
+
+    
+
+
+
+    <header class="fixed-top sticky-lg-top">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container-md">
+            <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbar"
+                    aria-controls="navbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+            >
+                <i class="fas fa-bars"></i>
+            </button>
+            <a class="navbar-brand m-auto" href="/#mjuz">
+                <img
+                        src="/assets/img/logo_small.svg"
+                        alt="µs"
+                        loading="lazy"
+                        class="navbar-height my-n3"
+                />
+            </a>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="navbar-nav nav me-auto mb-2 mb-sm-0">
+                    
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link " href="/#example">Example</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link " href="/#use-cases">Use Cases</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        
+                        <a class="nav-link " href="/#publications">Publications</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+    
+    
+    
+    
+        <article class="container-md my-3 my-md-5" id="example">
+    
+        <header class="my-3">
+            <h1>Example</h1>
+        </header>
+    
+    <div class="row">
+    <div class="col-12 col-lg-6">
+    <figure class="card border float-start me-4">
+    <img src="/assets/img/website.svg" alt="Webpage deployment illustration" class="card-header card-img-top" />
+    <figcaption class="card-footer figure-caption text-center border-0">Webpage.</figcaption>
+</figure>
+    <p>Lets consider a simple static website with a single <code class="language-plaintext highlighter-rouge">index.html</code> page hosted in an AWS S3 bucket.
+While this is unrealistically simple, it suffices to showcase our approach.
+You can find the full source code and instructions to execute it yourself in <a href="https://github.com/mjuz-iac/mjuz/tree/main/webpage" target="_blank">our <i class="fab fa-github"></i> repository</a>.</p>
+
+    <p>In descriptive infrastructure as code (IaC) systems, users define a directed acyclic graph (DAG)
+where each node is a resource, e.g., a db, container, load balancer, or network ACL entry,
+and arcs are dependencies between them.
+These dependencies are transitive and order the deployment,
+i.e., if resource <em>R</em> depends on <em>S</em>, <em>S</em> must be deployed before <em>R</em> and <em>R</em> must not be deployed when <em>S</em> is not deployed.
+For the webpage,
+the index must be deployed after and undeployed before the bucket.
+Have a look at the deployment graph and code describing it for <span class="mjuz">µs</span> using regular TypeScript.</p>
+  </div>
+    <div class="col-12 col-lg-6">
+        <figure class="card border">
+            <div class="card-header">
+                <div class="row justify-content-center">
+                    <img class="col-5 col-xxl-4 mb-3" src="/assets/img/website-centralized.svg" alt="Webpage deployment graph" />
+                    <div class="col-12 col-xxl-8">
+            <div class="language-ts mb-n3 highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">bucket</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Bucket</span><span class="p">(</span><span class="dl">'</span><span class="s1">bucket</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">website</span><span class="p">:</span> <span class="p">{</span> <span class="na">indexDocument</span><span class="p">:</span> <span class="dl">'</span><span class="s1">index.html</span><span class="dl">'</span> <span class="p">}</span>
+<span class="p">});</span> <span class="c1">// Creates the S3 bucket of the website</span>
+<span class="kd">const</span> <span class="nx">index</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BucketObject</span><span class="p">(</span><span class="dl">'</span><span class="s1">index</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">bucket</span><span class="p">:</span> <span class="nx">bucket</span><span class="p">,</span>
+    <span class="na">content</span><span class="p">:</span> <span class="nx">content</span><span class="p">,</span>
+    <span class="na">key</span><span class="p">:</span> <span class="dl">'</span><span class="s1">index.html</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">contentType</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text/html; charset=utf-8</span><span class="dl">'</span>
+<span class="p">});</span> <span class="c1">// Saves the index.html in the bucket</span>
+</code></pre></div>            </div>
+          </div>
+                </div>
+            </div>
+            <figcaption class="card-footer figure-caption text-center border-0">Webpage deployment graph and the <span class="mjuz">µs</span> deployment definition.</figcaption>
+        </figure>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 col-lg-6">
+    <p>In DevOps organizations, ideally,
+each team operates its own resources, including deployment.
+To ensure correct deployment and undeployment order, teams need to manually coordinate
+whenever resources are deployed, updated or undeployed.
+This decreases the flexibility of the teams and wastes time due to synchronization.
+To decouple the deployment times,
+<span class="mjuz">µs</span> treats deployments not as one-off tasks – as it is the case with all common IaC systems –
+but as continuously running processes,
+updating the deployed resources reactively based on the deployment definition
+<em>and</em> external signals, e.g., changes in another deployment.</p>
+
+    <p>In the website example, the <em>provider</em> could be responsible for the bucket
+and the <em>editor</em> for the index page in it.
+To ensure that the page is only and correctly deployed when the bucket is,
+both teams need to manually coordinate whenever the bucket
+is deployed, updated or undeployed.
+This means that the editor starts their deployment independently and runs it continuously.
+Whenever the provider starts or updates their deployment,
+the editor’s deployment automatically deploys, updates and undeploys the index page,
+without manual intervention or synchronization.</p>
+
+    <p>To enable such behavior,
+the connections between deployments and
+inter-deployment dependencies of their resources must be explicit in the deployment definitions.
+<span class="mjuz">µs</span> introduces three new resource types:
+<code class="language-plaintext highlighter-rouge">RemoteConnection</code> for connections to other deployments,
+<code class="language-plaintext highlighter-rouge">Offer</code> to provide resources or information to a connected deployment,
+and <code class="language-plaintext highlighter-rouge">Wish</code> to access the offer of a connected deployment.
+Using them, the provider and editor specify their connection to the other deployment.
+The provider offers its bucket to the editor deployment.
+The editor specifies its expectation of the offer
+by defining a wish, allowing to use the offered bucket via <code class="language-plaintext highlighter-rouge">wish.offer</code>.</p>
+  </div>
+    <div class="col-12 col-lg-6">
+        <figure class="card border">
+            <div class="card-header text-center">
+                <img class="" src="/assets/img/website-decentralized.svg" alt="Decentralized webpage deployment graph using µs" />
+            </div>
+            <figcaption class="card-footer figure-caption text-center border-0">Decentralized webpage deployment graph using <span class="mjuz">µs</span>.</figcaption>
+        </figure>
+        <figure class="card border">
+            <div class="card-header">
+        <div class="language-ts mb-n3 highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">editor</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RemoteConnection</span><span class="p">(</span><span class="dl">'</span><span class="s1">editor</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">bucket</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Bucket</span><span class="p">(</span><span class="dl">'</span><span class="s1">bucket</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">website</span><span class="p">:</span> <span class="p">{</span> <span class="na">indexDocument</span><span class="p">:</span> <span class="dl">'</span><span class="s1">index.html</span><span class="dl">'</span> <span class="p">}</span>
+<span class="p">});</span>
+<span class="k">new</span> <span class="nx">Offer</span><span class="p">(</span><span class="nx">editor</span><span class="p">,</span> <span class="dl">'</span><span class="s1">bucket</span><span class="dl">'</span><span class="p">,</span> <span class="nx">bucket</span><span class="p">);</span>
+</code></pre></div>        </div>
+      </div>
+            <figcaption class="card-footer figure-caption text-center border-0"><span class="mjuz">µs</span> deployment definition of the provider.</figcaption>
+        </figure>
+        <figure class="card border">
+            <div class="card-header">
+        <div class="language-ts mb-n3 highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">provider</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">RemoteConnection</span><span class="p">(</span><span class="dl">'</span><span class="s1">provider</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">wish</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Wish</span><span class="o">&lt;</span><span class="nx">Bucket</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">provider</span><span class="p">,</span> <span class="dl">'</span><span class="s1">bucket</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">index</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">BucketObject</span><span class="p">(</span><span class="dl">'</span><span class="s1">index</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
+    <span class="na">bucket</span><span class="p">:</span> <span class="nx">wish</span><span class="p">.</span><span class="nx">offer</span><span class="p">,</span>
+    <span class="na">content</span><span class="p">:</span> <span class="nx">content</span><span class="p">,</span>
+    <span class="na">key</span><span class="p">:</span> <span class="dl">'</span><span class="s1">index.html</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">contentType</span><span class="p">:</span> <span class="dl">'</span><span class="s1">text/html; charset=utf-8</span><span class="dl">'</span>
+<span class="p">});</span>
+</code></pre></div>        </div>
+      </div>
+            <figcaption class="card-footer figure-caption text-center border-0"><span class="mjuz">µs</span> deployment definition of the editor.</figcaption>
+        </figure>
+    </div>
+</div>
+
+</article>
+
+    
+
+    
+    
+    
+        <article class="container-md my-3 my-md-5" id="use-cases">
+    
+        <header class="my-3">
+            <h1>Use Cases</h1>
+        </header>
+    
+    <p>In addition to IaC use cases covered by solutions like
+<a href="https://www.pulumi.com" target="_blank">Pulumi</a> or <a href="https://aws.amazon.com/cdk/" target="_blank">AWS CDK</a>,
+<span class="mjuz">µs</span> enables the following three use cases,
+which we illustrate with the <a href="/#example">webpage example</a>.</p>
+
+<div class="row">
+<div class="col-12 col-lg-4">
+    <h2 id="asynchronous-deployment">Asynchronous Deployment</h2>
+
+    <p><span class="mjuz">µs</span> enables teams to start their deployments independently without synchronization.
+Resources are asynchronously deployed once their dependencies are satisfied.
+E.g., the editor starts its deployment before the provider.
+The index first remains not deployed as its dependency to the bucket is unsatisfied.
+Once the provider deploys the bucket, <span class="mjuz">µs</span> deploys the editor’s index page.</p>
+  </div>
+<div class="col-12 col-lg-4">
+    <h2 id="safe-undeployment">Safe Undeployment</h2>
+
+    <p><span class="mjuz">µs</span> ensures that all resources depending on a resource <em>R</em>
+are not deployed anymore, when <em>R</em> is undeployed.
+If <em>R</em> shall be undeployed, the undeployment of all resources depending on it is triggered
+and <em>R</em> is only undeployed after completion.
+E.g., when the provider undeploys the bucket, <span class="mjuz">µs</span> automatically undeploys the editor’s index page before.</p>
+  </div>
+<div class="col-12 col-lg-4">
+    <h2 id="reactive-updates">Reactive Updates</h2>
+
+    <p><span class="mjuz">µs</span> automatically transports configuration changes across deployments, triggering reactive updates.
+E.g., the editor might show the bucket’s name (<code class="language-plaintext highlighter-rouge">wish.offer.name</code>) in the content of the page.
+If the provider updates the name of the bucket,
+this change is transported to the editor’s deployment,
+which subsequently automatically updates the page’s content to the new name.</p>
+  </div>
+</div>
+
+<div id="uc-anim" class="row">
+    <input type="radio" name="slides" id="play" checked="" />
+    
+        <input type="radio" name="slides" id="slide-1" />
+    
+        <input type="radio" name="slides" id="slide-2" />
+    
+        <input type="radio" name="slides" id="slide-3" />
+    
+        <input type="radio" name="slides" id="slide-4" />
+    
+        <input type="radio" name="slides" id="slide-5" />
+    
+        <input type="radio" name="slides" id="slide-6" />
+    
+        <input type="radio" name="slides" id="slide-7" />
+    
+        <input type="radio" name="slides" id="slide-8" />
+    
+        <input type="radio" name="slides" id="slide-9" />
+    
+        <input type="radio" name="slides" id="slide-10" />
+    
+        <input type="radio" name="slides" id="slide-11" />
+    
+        <input type="radio" name="slides" id="slide-12" />
+    
+        <input type="radio" name="slides" id="slide-13" />
+    
+        <input type="radio" name="slides" id="slide-14" />
+    
+        <input type="radio" name="slides" id="slide-15" />
+    
+    <div class="controls col-lg-6 my-lg-3">
+        <div class="card border col-12">
+            <img class="card-img-top p-3 inject-svg" src="/assets/img/website-decentralized.svg" alt="Animated deployment use cases animation." />
+            <div class="card-footer text-center">
+                <label class="form-check-input" type="radio" for="play"><i class="fas fa-play"></i></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-1"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-2"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-3"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-4"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-5"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-6"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-7"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-8"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-9"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-10"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-11"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-12"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-13"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-14"></label>
+                
+                    <label class="form-check-input" type="radio" for="slide-15"></label>
+                
+            </div>
+        </div>
+    </div>
+    <div class="captions col-12 col-lg-6 my-3">
+        <div class="card list-group">
+            <label for="slide-1" class="list-group-item list-group-item-action">The editor starts their deployment.
+                <div class="list-group-flush">
+                    <label for="slide-2" class="list-group-item list-group-item-action">The remote connection to the provider is deployed.</label>
+                    <label for="slide-3" class="list-group-item list-group-item-action">The wish for the bucket is deployed but unsatisfied. Therefore, index is not deployed.</label>
+                </div>
+            </label>
+            <label for="slide-4" class="list-group-item list-group-item-action">The provider starts their deployment.
+                <div class="list-group-flush">
+                    <label for="slide-5" class="list-group-item list-group-item-action">The remote connection to the editor and the bucket are deployed in parallel.</label>
+                    <label for="slide-6" class="list-group-item list-group-item-action">The offer is deployed.</label>
+                    <label for="slide-7" class="list-group-item list-group-item-action">The offer is forwarded to the editor.</label>
+                    <label for="slide-8" class="list-group-item list-group-item-action">The index is deployed automatically, because the wish it depends on is now satisfied.</label>
+                </div>
+            </label>
+            <label for="slide-9" class="list-group-item list-group-item-action">The provider stops their deployment.
+                <div class="list-group-flush">
+                    <label for="slide-10" class="list-group-item list-group-item-action">The offer withdrawal is sent to the editor deployment, which automatically undeploys the index, because the wish turns unsatisfied.</label>
+                    <label for="slide-11" class="list-group-item list-group-item-action">The editor signals that no resource depending on the wish is deployed anymore, which completes the undeployment of the offer.</label>
+                    <label for="slide-12" class="list-group-item list-group-item-action">The remote connection to the editor and the bucket are undeployed in parallel.</label>
+                </div>
+            </label>
+            <label for="slide-13" class="list-group-item list-group-item-action">The editor stops their deployment.
+                <div class="list-group-flush">
+                    <label for="slide-14" class="list-group-item list-group-item-action">The wish is undeployed.</label>
+                    <label for="slide-15" class="list-group-item list-group-item-action">The remote connection to the provider is undeployed.</label>
+                </div>
+            </label>
+        </div>
+    </div>
+</div>
+
+</article>
+
+    
+
+    
+    
+    
+        <article class="container-md my-3 my-md-5" id="publications">
+    
+        <header class="my-3">
+            <h1>Publications</h1>
+        </header>
+    
+    <ol class="bibliography"><li><div class="card border">
+
+  <div id="Sokolowski:2021:Automating" class="card-body">
+    
+      <div class="abbr">
+          
+              
+                <abbr class="badge bg-primary">ESEC/FSE</abbr><br />
+              
+          
+          
+      </div>
+      <h5 class="card-title">Automating Serverless Deployments for DevOps Organizations</h5>
+      <p class=" card-text">
+          <div class="author">
+            
+              
+              
+              
+              
+                
+                  
+                    
+                    
+              
+
+              
+                
+                  <a href="https://dsoko.de">Daniel Sokolowski</a>,
+                
+              
+            
+              
+              
+              
+              
+                
+                  
+                    
+                    
+              
+
+              
+                
+                  <a href="https://programming-group.com/members/weisenburger">Pascal Weisenburger</a>,
+                
+              
+            
+              
+              
+              
+              
+                
+                  
+                    
+                    
+              
+
+              
+                
+                  <a href="https://programming-group.com/members/salvaneschi">Guido Salvaneschi</a>
+                
+              
+            
+          </div>
+
+          <div class="periodical">
+          
+            In <em>Proceedings of the 29th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering</em>, ESEC/FSE, 2021
+          
+          </div>
+        
+      </p>
+
+    
+      <a class="abstract card-link z-depth-0" role="button" data-mdb-toggle="collapse" data-mdb-target="#abstract-Sokolowski2021Automating" aria-expanded="false" aria-controls="abstract-Sokolowski2021Automating">Abstract</a>
+    
+    
+      
+        <a href="/assets/pdf/papers/2021_Automating-Serverless-Deployments-for-DevOps-Organizations.pdf" class="card-link z-depth-0" role="button" target="_blank">PDF</a>
+      
+    
+    
+      <a href="https://doi.org/10.1145/3468264.3468575" class="card-link z-depth-0" role="button" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+    
+    
+    
+      
+      <a href="https://doi.org/10.5281/zenodo.4888908" class="card-link z-depth-0" role="button" target="_blank">Supp</a>
+      
+    
+    
+    
+      <a href="https://github.com/mjuz-iac/mjuz" class="card-link z-depth-0" role="button" target="_blank">Code</a>
+    
+    
+    
+    
+
+    <!-- Hidden abstract block -->
+    
+    <div id="abstract-Sokolowski2021Automating" class="collapse mt-3">
+                <p class="card-text">DevOps unifies software development and operations in cross-functional teams to improve software delivery and operations (SDO) performance. Ideally, cross-functional DevOps teams independently deploy their services, but the correct operation of a service often demands other services, requiring coordination to ensure the correct deployment order. This issue is currently solved either with a central deployment or manual out-of-band communication across teams, e.g., via phone, chat, or email. Unfortunately, both contradict the independence of teams, hindering SDO performance – the reason why DevOps is adopted in the first place.</p><p class="card-text">In this work, we conduct a study on 73 IT professionals, showing that, in practice, they resort to manual coordination for correct deployments even if they expect better SDO performance with fully automated approaches. To address this issue, we propose μs ([mju:z] “muse” ), a novel IaC system automating deployment coordination in a fully decentralized fashion, still retaining compatibility with DevOps practice – in contrast to today’s solutions. We implement <span class="mjuz">µs</span>, demonstrate that it effectively enables automated coordination, introduces negligible definition overhead, has no performance overhead, and is broadly applicable, as shown by the migration of 64 third-party IaC projects.</p>
+    </div>
+    
+  </div>
+</div>
+</li>
+<li><div class="card border">
+
+  <div id="Sokolowski:2021:Deployment" class="card-body">
+    
+      <div class="abbr">
+          
+              
+                <abbr class="badge bg-primary">ESEC/FSE</abbr><br />
+              
+          
+          
+      </div>
+      <h5 class="card-title">Deployment Coordination for Cross-Functional DevOps Teams</h5>
+      <p class=" card-text">
+          <div class="author">
+            
+              
+              
+              
+              
+                
+                  
+                    
+                    
+              
+
+              
+                
+                  <a href="https://dsoko.de">Daniel Sokolowski</a>
+                
+              
+            
+          </div>
+
+          <div class="periodical">
+          
+            In <em>Proceedings of the 29th ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering</em>, ESEC/FSE, 2021
+          
+          </div>
+        
+      </p>
+
+    
+      <a class="abstract card-link z-depth-0" role="button" data-mdb-toggle="collapse" data-mdb-target="#abstract-Sokolowski2021Deployment" aria-expanded="false" aria-controls="abstract-Sokolowski2021Deployment">Abstract</a>
+    
+    
+      
+        <a href="/assets/pdf/papers/2021_Deployment-Coordination-for-Cross-Functional-DevOps-Teams.pdf" class="card-link z-depth-0" role="button" target="_blank">PDF</a>
+      
+    
+    
+      <a href="https://doi.org/10.1145/3468264.3473101" class="card-link z-depth-0" role="button" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Hidden abstract block -->
+    
+    <div id="abstract-Sokolowski2021Deployment" class="collapse mt-3">
+                <p class="card-text">Software stability and reliability are the core concerns of DevOps. They are improved by tightening the collaboration between developers and operators in cross-functional teams on the one hand and by automating operations through continuous integration (CI) and infrastructure as code (IaC) on the other hand. Ideally, teams in DevOps are fully independent. Still, their applications often depend on each other in practice, requiring them to coordinate their deployment through centralization or manual coordination.</p><p class="card-text">With this work, we propose and implement the novel IaC solution <span class="mjuz">µs</span> ([mju:z] ”muse”), which automates deployment coordination in a decentralized fashion. <span class="mjuz">µs</span> is the first approach that is compatible with the DevOps goals as it enables truly independent operations of the DevOps teams. We define our research problem through a questionnaire survey with IT professionals and evaluate the solution by comparing it to other modern IaC approaches, assessing its performance, and applying it to existing IaC programs.</p>
+    </div>
+    
+  </div>
+</div>
+</li></ol>
+
+</article>
+
+    
+
+
+</main>
+
+<footer class="text-center text-lg-start bg-primary text-light pt-5">
+    <div class="container-md text-center text-md-start">
+        <div class="row">
+            <div class="col-lg-3 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                    <span class="mjuz">µs</span> Infrastructure as Code
+                </h6>
+                <p>
+                    
+                </p>
+                <p>
+                    <span class="mjuz">µs</span> is a project of the <a href="https://programming-group.com" class="text-reset" target="_blank">Programming Group</a>
+                    at the <a href="https://www.unisg.ch" class="text-reset" target="_blank">University of St. Gallen</a>
+                    and <a href="https://tu-darmstadt.de" class="text-reset" target="_blank">TU Darmstadt</a>.
+                </p>
+            </div>
+
+            <div class="col-md-4 col-lg-3 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                    Resources
+                </h6>
+                
+                
+                    <p><a href="https://github.com/mjuz-iac/mjuz" class="text-reset" target="_blank">
+                        <i class="fab fa-github"></i>&nbsp;
+                        <span class="mjuz">µs</span> Infrastructure as Code
+                    </a></p>
+                
+                    <p><a href="https://github.com/mjuz-iac/pulumi" class="text-reset" target="_blank">
+                        <i class="fab fa-github"></i>&nbsp;
+                        Pulumi for <span class="mjuz">µs</span>
+                    </a></p>
+                
+                    <p><a href="https://github.com/mjuz-iac/stackref-converter" class="text-reset" target="_blank">
+                        <i class="fab fa-github"></i>&nbsp;
+                        Stack References to <span class="mjuz">µs</span> Converter
+                    </a></p>
+                
+            </div>
+
+            <div class="col-md-4 col-lg-3 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                    Contributors
+                </h6>
+                
+                    <p><a href="https://dsoko.de" class="text-reset" target="_blank">
+                        <i class="fas fa-user"></i>&nbsp;
+                        MSc Daniel Sokolowski
+                    </a></p>
+                
+                    <p><a href="https://programming-group.com/members/weisenburger" class="text-reset" target="_blank">
+                        <i class="fas fa-user"></i>&nbsp;
+                        Dr. Pascal Weisenburger
+                    </a></p>
+                
+                    <p><a href="https://programming-group.com/members/salvaneschi" class="text-reset" target="_blank">
+                        <i class="fas fa-user"></i>&nbsp;
+                        Prof. Dr. Guido Salvaneschi
+                    </a></p>
+                
+            </div>
+
+            <div class="col-md-4 col-lg-3 mb-4">
+                <h6 class="text-uppercase fw-bold mb-4">
+                    Support
+                </h6>
+                
+                    <p>
+                        <a href="https://www.dfg.de" class="text-reset" target="_blank">
+                            <b>
+                                
+                                German Research Foundation (DFG)
+                            </b>
+                        </a><br />
+                        
+                            <a href="https://www.crossing.tu-darmstadt.de/crc_1119/index.en.jsp" class="text-reset" target="_blank">
+                                
+                                SFB CROSSING
+                            </a><br />
+                        
+                            <a href="https://gepris.dfg.de/gepris/projekt/383964710?language=en" class="text-reset" target="_blank">
+                                
+                                Project 383964710
+                            </a><br />
+                        
+                    </p>
+                
+                    <p>
+                        <a href="https://wissenschaft.hessen.de/wissenschaft/landesprogramm-loewe" class="text-reset" target="_blank">
+                            <b>
+                                
+                                Hessian LOEWE Initiative
+                            </b>
+                        </a><br />
+                        
+                            <a href="https://www.software-factory-4-0.de" class="text-reset" target="_blank">
+                                
+                                SoftwareFactory 4.0
+                            </a><br />
+                        
+                            <a href="https://www.emergencity.de/" class="text-reset" target="_blank">
+                                
+                                emergenCITY
+                            </a><br />
+                        
+                    </p>
+                
+                    <p>
+                        <a href="https://www.unisg.ch" class="text-reset" target="_blank">
+                            <b>
+                                
+                                University of St. Gallen
+                            </b>
+                        </a><br />
+                        
+                            <a href="https://www.unisg.ch/en/forschung/grantsoffice/foerderung/hochschulinterne-foerderung/gffpostdocfoerderung" class="text-reset" target="_blank">
+                                
+                                IPF 1031569
+                            </a><br />
+                        
+                    </p>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        &copy; Copyright 2021.
+        
+            <a href="/impressum" class="text-reset">Impressum</a>.
+        
+        Last updated: August 16, 2021.
+    </div>
+</footer>
+
+
+
+
+    <script type="text/javascript" src="/assets/js/bundle-cf5867795f881919eb1e61e3933d3d27.js"></script>
+
+  </body>
+</html>
